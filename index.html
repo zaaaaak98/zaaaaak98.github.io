@@ -4,19 +4,28 @@
             Portfolio
         </title>
         <style>
-            #project {
-                body {
-                    font-family: Overpass, Arial, sans-serif;
-                    background-color: #F0DC82;
+            body {
+                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+                    font-weight: 300;
+                    background-color: bisque;
                     padding: 1em;
-}
-                h1 {
-                    text-align: center;
                 }
-                h2 {
+            h1 {
                     text-align: center;
-                }
             }
+            h2 {
+                padding-bottom: 1em;
+                }
+            .docker {            
+                width: 75%;
+                background-color: beige;
+                padding: 2em;
+            }
+            .space {
+                width: 25%;
+                background-color: white;
+            }
+
         </style>
     </head>
     <body>
@@ -26,17 +35,23 @@
         <p>
             This page serves the purpose of documenting my completed, and in progress, projects.
         </p>
+        <div class="projects">
+            <div class="docker">
+            
+                <h2>
+                    <a href="https://github.com/zaaaaak98/LearningDocker">LearningDocker</a>
+                </h2>
+                <p>
+                    This is a repository that I used when learning the software Docker.
+                </p>
+                <p>
+                    Docker is a software that allows for the creation of JavaScript containers.
+                </p>
+            
+            </div>
+            <div class="space">
 
-        <div id="project">
-            <h2>
-                <a href="https://github.com/zaaaaak98/LearningDocker">LearningDocker</a>
-            </h2>
-            <p>
-                This is a repository that I used when learning the software Docker.
-            </p>
-            <p>
-                Docker is a software that allows for the creation of JavaScript containers.
-            </p>
+            </div>
         </div>
     </body>
 </html>
