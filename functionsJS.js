@@ -8,23 +8,21 @@ function nasa(){
     //Attempt to fetch API data
     fetch(nasaURL)
         .then(response=>{
-            window.alert("No response");
             if(!response.ok){
                 throw new Error("Bad response");
             }
-            console.log(response);
-            window.alert("Response fetched");
+            console.log("Response fetched");
             return response.json();            
         })
         .then(data=> {
-            window.alert("Data recieved");
+            console.log("Data received");
             //const nasaJSON = response.json();
             //let imageURL = data.hdurl;
-            //document.getElementById("nasaImage").setAttribute("src", data.hdurl);
+            document.getElementById("nasaImage").setAttribute("src", data.hdurl);
             console.log(data);
         })
         .catch(error=> {
             console.log("error", error);
-            window.alert("It didnt work");
+            window.alert("Data not received");
     })
 }

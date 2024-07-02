@@ -5,21 +5,26 @@
         </title>
         <style>
             body {
-                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-                    font-weight: 300;
-                    background-color: bisque;
-                    padding: 0.5em;
+                font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+                font-weight: 300;
+                background-color: bisque;
+                padding: 0.5em;
                 }
             h1 {
-                    text-align: center;
+                text-align: center;
             }
             h2 {
                 padding-bottom: 1em;
                 }
-            .docker {            
+            img {
+                background-image: url("awaitingImage.webp");
+            }
+            .project {            
                 width: 50%;
                 background-color: beige;
                 padding-left: 2em;
+                padding-right: 2em;
+                padding-bottom: 2em;
                 float:left;
             }
             .space {
@@ -30,9 +35,10 @@
                 float:right;
             }
         </style>
-        <script type="text/javascript" src="functionsJS.js">
-
+        <script type="text/javascript" src="./functionsJS.js">
+            
         </script>
+        
     </head>
     <body>
         <h1>
@@ -42,7 +48,7 @@
             This page serves the purpose of documenting my completed, and in progress, projects.
         </p>
         <div class="projects">
-            <div class="docker">
+            <div class="project">
             
                 <h2>
                     <a href="https://github.com/zaaaaak98/LearningDocker">LearningDocker</a>
@@ -72,13 +78,21 @@
                 </ul>
             </div>
         </div>
-
-        <div class="textbox">
-            <form>
-                <input type="text" name="nasaAPI" value="" placeholder="Enter NASA API key here">
-                <button type="submit" onclick="nasa()"> Click me</button>
-                <img id="nasaImage" src = "" alt="Image">
-            </form>
+        <div class = "boxes">
+            <div class="project">
+                <h2>
+                    Astronomy Picture of the Day
+                </h2>
+                <p>
+                    Here is an implementation of the NASA  Astronomy Picture of the Day (APOD) API, found <a href="https://api.nasa.gov/">here</a>
+                </p>
+                <form>
+                    <input type="text" name="nasaAPI" value="" placeholder="Enter NASA API key here">
+                    <button type="button" onclick="nasa()" class="APODBtn"> Click me</button>
+                </form>
+                <br>
+                <img id="nasaImage" src = "" alt="Image not found" width=100% height=500px>
+            </div>
         </div>
     </body>
 </html>
