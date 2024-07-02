@@ -8,7 +8,7 @@
                     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
                     font-weight: 300;
                     background-color: bisque;
-                    padding: 1em;
+                    padding: 0.5em;
                 }
             h1 {
                     text-align: center;
@@ -17,19 +17,22 @@
                 padding-bottom: 1em;
                 }
             .docker {            
-                width: 65%;
+                width: 50%;
                 background-color: beige;
-                padding: 2em;
-                float: left;
+                padding-left: 2em;
+                float:left;
             }
             .space {
                 width: 25%;
                 background-color: white;
-                padding: 2em;
+                padding-right: 2em;
+                padding-left: 2em;
                 float:right;
             }
-
         </style>
+        <script type="text/javascript" src="functionsJS.js">
+
+        </script>
     </head>
     <body>
         <h1>
@@ -68,6 +71,14 @@
 
                 </ul>
             </div>
+        </div>
+
+        <div class="textbox">
+            <form>
+                <input type="text" name="nasaAPI" value="" placeholder="Enter NASA API key here">
+                <button type="submit" onclick="nasa()"> Click me</button>
+                <img id="nasaImage" src = "" alt="Image">
+            </form>
         </div>
     </body>
 </html>
