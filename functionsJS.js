@@ -3,7 +3,7 @@ function nasa(){
     //API URL Created
     let KEY = document.getElementsByName("nasaAPI")[0].value;
     const nasaURL = "https://api.nasa.gov/planetary/apod?api_key="+KEY;
-    window.alert(nasaURL);
+    console.log(nasaURL);
 
     //Attempt to fetch API data
     fetch(nasaURL)
