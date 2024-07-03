@@ -7,9 +7,10 @@
             body {
                 font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
                 font-weight: 300;
-                background-color: bisque;
+                color: white;
+                background-color: rgb(58, 58, 58);
                 padding: 0.5em;
-                }
+            }
             h1 {
                 text-align: center;
             }
@@ -18,18 +19,35 @@
                 }
             .project {            
                 width: 50%;
-                background-color: beige;
+                height: auto;
+                background-color: rgb(31, 31, 31);
                 padding-left: 2em;
                 padding-right: 2em;
                 padding-bottom: 2em;
                 float:left;
+                border-radius: 25px;
             }
-            .space {
+            .progress {
                 width: 25%;
-                background-color: white;
+                background-color: rgb(31, 31, 31);
                 padding-right: 2em;
                 padding-left: 2em;
                 float:right;
+                border-radius: 25px;
+            }
+            .space {
+                height: 2em;
+            }
+            button:hover {
+                color:black;
+                background-color: white;
+                border-radius: 5px;
+            }
+
+            button {
+                color: white;
+                background-color: black;
+                border-radius: 5px;
             }
         </style>
         <script type="text/javascript" src="./functionsJS.js">
@@ -44,7 +62,7 @@
         <p>
             This page serves the purpose of documenting my completed, and in progress, projects.
         </p>
-        <div class="projects">
+        <div class="space">
             <div class="project">
             
                 <h2>
@@ -58,7 +76,7 @@
                 </p>
             
             </div>
-            <div class="space">
+            <div class="progress">
                 <h2>
                     Courses in progress:
                 </h2>
@@ -75,7 +93,7 @@
                 </ul>
             </div>
         </div>
-        <div class = "boxes">
+        <div class = "space">
             <div class="project">
                 <h2>
                     Astronomy Picture of the Day
@@ -84,11 +102,26 @@
                     Here is an implementation of the NASA  Astronomy Picture of the Day (APOD) API, found <a href="https://api.nasa.gov/">here</a>
                 </p>
                 <form>
-                    <input type="text" name="nasaAPI" value="" placeholder="Enter NASA API key here">
-                    <button type="button" onclick="nasa()" class="APODBtn"> Click me</button>
+                    <input type="text" name="nasaAPIAPOD" value="" placeholder="Enter NASA API key here">
+                    <button type="button" onclick="nasaAPOD()" class="APODBtn"> Click me</button>
                 </form>
                 <br>
                 <img id="nasaImage" src = "" alt="Image not found. Please provide API Key" width=100% height="auto">
+            </div>
+        </div>
+        <div class="space">
+            <div class="project">
+                <h2>
+                    Near Earth Object Web service
+                </h2>
+                <form>
+                    <input type="text" name="nasaAPINeo" value="" placeholder="Enter NASA API key here">
+                    <input type="date" name="txtStartDate" value="" placeholder="Enter the start date">
+                    <input type="date" name="txtEndDate" value="" placeholder="Enter the end date">
+                    <button type="button" onclick="nasaNeo()" class="NeoWsBtn"> Click me</button>
+                </form>
+            <p id="NeoName"></p>
+            <p id=""></p>
             </div>
         </div>
     </body>
