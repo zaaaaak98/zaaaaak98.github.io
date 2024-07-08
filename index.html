@@ -103,7 +103,7 @@
                 </p>
                 <form>
                     <input type="text" name="nasaAPIAPOD" value="" placeholder="Enter NASA API key here">
-                    <button type="button" onclick="nasaAPOD()" class="APODBtn"> Click me</button>
+                    <button type="button" onclick="nasaAPOD()" class="APODBtn">Click me</button>
                 </form>
                 <br>
                 <img id="nasaImage" src = "" alt="Image not found. Please provide API Key" width=100% height="auto">
@@ -117,15 +117,13 @@
                 <form>
                     <input type="text" name="nasaAPINeo" value="" placeholder="Enter NASA API key here">
                     <input type="date" name="txtStartDate" value="" placeholder="Enter the start date">
-                    <input type="date" name="txtEndDate" value="" placeholder="Enter the end date">
                     <button type="button" onclick="nasaNeo()" class="NeoWsBtn"> Click me</button>
                 </form>
             <h2>
                 Near Earth Object data:
             </h2>
-            <ul id="NeoData">
-                
-            </ul>
+            <p id="numObjects"></p>
+            <p id="listObjects"></p>
             </div>
         </div>
     </body>

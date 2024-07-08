@@ -29,9 +29,9 @@ function nasaAPOD(){
 function nasaNeo(){
     let KEY = document.getElementsByName("nasaAPINeo")[0].value;
     let start_date = document.getElementsByName("txtStartDate")[0].value;
-    let end_date = document.getElementsByName("txtEndDate")[0].value;
 
-    const nasaURL = 'https://api.nasa.gov/neo/rest/v1/feed?start_date='+start_date+"&end_date="+end_date+"&api_key="+KEY;
+    const nasaURL = 'https://api.nasa.gov/neo/rest/v1/feed?start_date='+start_date+"&end_date="+start_date+"&api_key="+KEY;
+    console.log(nasaURL);
     fetch(nasaURL)
         .then(response=>{
             if(!response.ok){
@@ -41,17 +41,22 @@ function nasaNeo(){
         })
         .then(data=> {
             console.log("Data received");
-            const dataList = document.getElementById('NeoData');
-            //dataList.innerHTML = '';
-            data.forEach(item => {
-                const listItem = document.createElement('ul');
-                listItem.textContent = item.name;
-                dataList.appendChild(listItem);
-            });
-            console.log(data);
+            document.getElementById("numObjects").innerHTML = "Number of Near Earth Objects: " + data.element_count;
+            console.log(data.element_count);
         })
         .catch(error=> {
             console.log("error", error);
             window.alert("Data not received");
         })
     }
+/*
+function list(data, date){
+    let listOfObjects = `
+        <ul></ul>
+        `
+    let newObject = ""
+    newObject = data.near_earth_object;
+
+    listOfObjects = listOfObjects + '\n' + newObject;
+}
+    */
