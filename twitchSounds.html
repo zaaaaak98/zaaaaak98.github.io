@@ -36,6 +36,9 @@
             background-color: #aaaaaa;
             cursor: not-allowed;
         }
+        input[type="range"] {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -56,10 +59,16 @@
         <button id="sound9Button" onclick="playSound('sound9')">Sound 9</button>
         <button id="sound10Button" onclick="playSound('sound10')">Sound 10</button>
     </div>
+    
+    <div>
+        <label for="ttsVolume">TTS Volume:</label>
+        <input type="range" id="ttsVolume" min="0" max="1" step="0.1" value="1">
+    </div>
 
     <script>
         let isPlaying = false;
         const twitchChannel = prompt("Enter your Twitch channel name:").toLowerCase();
+        const ttsVolumeControl = document.getElementById('ttsVolume');
 
         function playSound(sound) {
             if (isPlaying) return;
@@ -119,8 +128,10 @@
         }
 
         function speakText(text) {
+            const volume = ttsVolumeControl.value;
             const speech = new SpeechSynthesisUtterance(text);
             speech.lang = 'en-US';
+            speech.volume = volume;
             window.speechSynthesis.speak(speech);
         }
 
