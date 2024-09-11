@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitch Soundboard with OAuth</title>
+    <title>Soundboard with TTS and 10 Sounds</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -42,7 +42,7 @@
     </style>
 </head>
 <body>
-    <h1>Twitch Soundboard with OAuth</h1>
+    <h1>Stream Soundboard with TTS and 10 Sounds</h1>
     <p>Click a button or type commands in Twitch chat to play a sound!</p>
 
     <div>
@@ -69,25 +69,13 @@
         <button id="sendHelpButton" onclick="sendHelpMessage()">Send !help</button>
     </div>
 
-    <div>
-        <button id="loginButton">Login with Twitch</button>
-    </div>
-
     <script>
+        let isPlaying = false;
+        const twitchChannel = prompt("Enter your Twitch channel name:").toLowerCase();
         const ttsVolumeControl = document.getElementById('ttsVolume');
-        const loginButton = document.getElementById('loginButton');
-        let ws;
-        let oauthToken;
-        let twitchChannel;
-
-        const clientId = '8wrbc6t4o6zwknw3xnn3hn7n65vqin';
-        const redirectUri = 'https://zaaaaak98.github.io/twitchSounds.html';
 
         function playSound(sound) {
-            if (!ws || ws.readyState !== WebSocket.OPEN) {
-                alert("You must be connected to Twitch chat.");
-                return;
-            }
+            if (isPlaying) return;
 
             let audio;
             switch (sound) {
@@ -98,35 +86,43 @@
                     audio = new Audio('https://example.com/sounds/sound2.mp3');
                     break;
                 case 'sound3':
-                    audio = new Audio('https://example.com/sounds/sound1.mp3');
+                    audio = new Audio('https://example.com/sounds/sound3.mp3');
                     break;
                 case 'sound4':
-                    audio = new Audio('https://example.com/sounds/sound2.mp3');
+                    audio = new Audio('https://example.com/sounds/sound4.mp3');
                     break;
                 case 'sound5':
-                    audio = new Audio('https://example.com/sounds/sound1.mp3');
+                    audio = new Audio('https://example.com/sounds/sound5.mp3');
                     break;
                 case 'sound6':
-                    audio = new Audio('https://example.com/sounds/sound2.mp3');
+                    audio = new Audio('https://example.com/sounds/sound6.mp3');
                     break;
                 case 'sound7':
-                    audio = new Audio('https://example.com/sounds/sound1.mp3');
+                    audio = new Audio('https://example.com/sounds/sound7.mp3');
                     break;
                 case 'sound8':
-                    audio = new Audio('https://example.com/sounds/sound2.mp3');
+                    audio = new Audio('https://example.com/sounds/sound8.mp3');
                     break;
                 case 'sound9':
-                    audio = new Audio('https://example.com/sounds/sound1.mp3');
+                    audio = new Audio('https://example.com/sounds/sound9.mp3');
                     break;
                 case 'sound10':
-                    audio = new Audio('https://example.com/sounds/sound2.mp3');
+                    audio = new Audio('https://example.com/sounds/sound10.mp3');
                     break;
                 default:
                     console.error('Invalid sound');
                     return;
             }
 
+            isPlaying = true;
+            disableButtons(true);
+
             audio.play();
+
+            audio.onended = function() {
+                isPlaying = false;
+                disableButtons(false);
+            };
         }
 
         function disableButtons(state) {
@@ -144,8 +140,9 @@
         }
 
         function sendMessageToChat(message) {
-            if (ws && ws.readyState === WebSocket.OPEN) {
+            if (ws.readyState === WebSocket.OPEN) {
                 ws.send(`PRIVMSG #${twitchChannel} :${message}`);
+                console.log(`Sent message: ${message}`);
             } else {
                 console.error('WebSocket is not open. Cannot send message.');
             }
@@ -155,71 +152,62 @@
             sendMessageToChat("Available commands: !sound1, !sound2, !sound3, !sound4, !sound5, !sound6, !sound7, !sound8, !sound9, !sound10");
         }
 
-        function authenticateTwitch() {
-            const authUrl = `https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=token&scope=chat:read chat:edit`;
-            window.location.href = authUrl;
-        }
+        const ws = new WebSocket('wss://irc-ws.chat.twitch.tv:443');
 
-        function handleAuthCallback() {
-            const hash = window.location.hash.substring(1);
-            const params = new URLSearchParams(hash);
-            oauthToken = params.get('access_token');
-            if (oauthToken) {
-                connectToChat();
-            } else {
-                console.error("OAuth token not found.");
-            }
-        }
+        ws.onopen = function() {
+            console.log("Connected to Twitch chat");
+            alert("Successfully connected to Twitch chat!");
 
-        function connectToChat() {
-            ws = new WebSocket('wss://irc-ws.chat.twitch.tv:443');
+            // Join the specified channel as an anonymous user
+            ws.send(`NICK justinfan12345`);  // This is a common anonymous user for Twitch chat
+            ws.send(`JOIN #${twitchChannel}`);
+        };
 
-            ws.onopen = function() {
-                console.log("Connected to Twitch chat");
-                alert("Successfully connected to Twitch chat!");
+        ws.onmessage = function(event) {
+            const message = event.data;
+            console.log(message);
 
-                ws.send(`PASS oauth:${oauthToken}`);
-                ws.send(`NICK justinfan12345`); // Anonymous user
-                ws.send(`JOIN #${twitchChannel}`);
-            };
-
-            ws.onmessage = function(event) {
-                const message = event.data;
-                console.log("Received message:", message);
-
-                // Check if the message contains a command to play a sound
-                if (message.includes("PRIVMSG")) {
-                    const userMessage = message.split("PRIVMSG")[1].split(":")[1].trim();
-                    
-                    if (userMessage === "!sound1") {
-                        playSound('sound1');
-                    } // Add other sound commands here
-                    else if (userMessage === "!help") {
-                        sendHelpMessage();
-                    } else {
-                        speakText(userMessage);
-                    }
+            // Check if the message contains a command to play a sound
+            if (message.includes("PRIVMSG")) {
+                const userMessage = message.split("PRIVMSG")[1].split(":")[1].trim();
+                
+                if (userMessage === "!sound1") {
+                    playSound('sound1');
+                } else if (userMessage === "!sound2") {
+                    playSound('sound2');
+                } else if (userMessage === "!sound3") {
+                    playSound('sound3');
+                } else if (userMessage === "!sound4") {
+                    playSound('sound4');
+                } else if (userMessage === "!sound5") {
+                    playSound('sound5');
+                } else if (userMessage === "!sound6") {
+                    playSound('sound6');
+                } else if (userMessage === "!sound7") {
+                    playSound('sound7');
+                } else if (userMessage === "!sound8") {
+                    playSound('sound8');
+                } else if (userMessage === "!sound9") {
+                    playSound('sound9');
+                } else if (userMessage === "!sound10") {
+                    playSound('sound10');
+                } else if (userMessage === "!help") {
+                    sendMessageToChat("Available commands: !sound1, !sound2, !sound3, !sound4, !sound5, !sound6, !sound7, !sound8, !sound9, !sound10");
+                } else {
+                    speakText(userMessage);
                 }
-            };
+            }
+        };
 
-            ws.onerror = function(error) {
-                console.error("WebSocket error:", error);
-                alert("Failed to connect to Twitch chat. Check the console for details.");
-            };
+        ws.onerror = function(error) {
+            console.error("WebSocket error:", error);
+            alert("Failed to connect to Twitch chat. Check the console for details.");
+        };
 
-            ws.onclose = function() {
-                console.log("Disconnected from Twitch chat");
-                alert("Disconnected from Twitch chat.");
-            };
-        }
-
-        loginButton.addEventListener('click', authenticateTwitch);
-
-        if (window.location.hash) {
-            handleAuthCallback();
-        } else {
-            twitchChannel = "zaaaaak98";
-        }
+        ws.onclose = function() {
+            console.log("Disconnected from Twitch chat");
+            alert("Disconnected from Twitch chat.");
+        };
     </script>
 </body>
 </html>
