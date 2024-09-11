@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soundboard with TTS, 10 Sounds, and YouTube Videos</title>
+    <title>Soundboard with TTS and 10 Sounds</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,24 +36,10 @@
             background-color: #aaaaaa;
             cursor: not-allowed;
         }
-        #eventLog {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #333;
-            color: #ddd;
-            width: 100%;
-            max-width: 600px;
-            overflow-y: auto;
-            height: 200px;
-            text-align: left;
-        }
-        #youtubeForm {
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
-    <h1>Stream Soundboard with TTS, 10 Sounds, and YouTube Videos</h1>
+    <h1>Stream Soundboard with TTS and 10 Sounds</h1>
     <p>Click a button or type commands in Twitch chat to play a sound!</p>
 
     <div>
@@ -70,13 +56,6 @@
         <button id="sound9Button" onclick="playSound('sound9')">Sound 9</button>
         <button id="sound10Button" onclick="playSound('sound10')">Sound 10</button>
     </div>
-
-    <div id="youtubeForm">
-        <input type="text" id="youtubeURL" placeholder="Enter YouTube video URL (under 30s)">
-        <button onclick="playYouTubeVideo()">Play YouTube Video</button>
-    </div>
-
-    <div id="eventLog"></div>
 
     <script>
         let isPlaying = false;
@@ -130,61 +109,6 @@
                 isPlaying = false;
                 disableButtons(false);
             };
-
-            logEvent(`Sound ${sound.slice(-1)} played`);
-        }
-
-        function playYouTubeVideo() {
-            const url = document.getElementById('youtubeURL').value;
-            const videoId = extractYouTubeVideoId(url);
-
-            if (!videoId) {
-                logEvent('Invalid YouTube URL');
-                return;
-            }
-
-            fetch(`https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=${videoId}&key=YOUR_API_KEY`)
-                .then(response => response.json())
-                .then(data => {
-                    const duration = parseISO8601Duration(data.items[0].contentDetails.duration);
-                    if (duration > 30) {
-                        logEvent('YouTube video is too long (over 30 seconds)');
-                        return;
-                    }
-
-                    playYouTube(videoId);
-                    logEvent(`YouTube video played: ${url}`);
-                })
-                .catch(error => {
-                    logEvent('Error fetching video details');
-                    console.error(error);
-                });
-        }
-
-        function extractYouTubeVideoId(url) {
-            const match = url.match(/(?:https?:\/\/)?(?:www\.)?youtube\.com\/(?:watch\?v=|embed\/|v\/)?([^"&?\/\s]{11})/);
-            return match ? match[1] : null;
-        }
-
-        function parseISO8601Duration(duration) {
-            const match = duration.match(/PT(\d+M)?(\d+S)?/);
-            const minutes = parseInt(match[1] || 0, 10) || 0;
-            const seconds = parseInt(match[2] || 0, 10) || 0;
-            return minutes * 60 + seconds;
-        }
-
-        function playYouTube(videoId) {
-            const iframe = document.createElement('iframe');
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
-
-            iframe.onload = function() {
-                setTimeout(() => {
-                    document.body.removeChild(iframe);
-                    logEvent(`YouTube video playback finished: ${videoId}`);
-                }, 30000); // Allow the video to play for 30 seconds
-            };
         }
 
         function disableButtons(state) {
@@ -196,15 +120,8 @@
         // Text-to-Speech Functionality
         function speakText(text) {
             const speech = new SpeechSynthesisUtterance(text);
-            speech.lang = 'en-US';  // Set language
+            speech.lang = 'en-UK';  // Set language
             window.speechSynthesis.speak(speech);
-        }
-
-        function logEvent(message) {
-            const log = document.getElementById('eventLog');
-            const timestamp = new Date().toLocaleTimeString();
-            log.innerHTML += `<div>[${timestamp}] ${message}</div>`;
-            log.scrollTop = log.scrollHeight;  // Auto-scroll to the bottom
         }
 
         // Prompt user for Twitch channel name
@@ -227,45 +144,32 @@
 
             // Check if the message contains a command to play a sound
             if (message.includes("PRIVMSG")) {
-                const user = message.split("!")[0].split(":")[1].trim();
                 const userMessage = message.split("PRIVMSG")[1].split(":")[1].trim();
                 
                 if (userMessage === "!sound1") {
                     playSound('sound1');
-                    logEvent(`Command '!sound1' triggered by ${user}`);
                 } else if (userMessage === "!sound2") {
                     playSound('sound2');
-                    logEvent(`Command '!sound2' triggered by ${user}`);
                 } else if (userMessage === "!sound3") {
                     playSound('sound3');
-                    logEvent(`Command '!sound3' triggered by ${user}`);
                 } else if (userMessage === "!sound4") {
                     playSound('sound4');
-                    logEvent(`Command '!sound4' triggered by ${user}`);
                 } else if (userMessage === "!sound5") {
                     playSound('sound5');
-                    logEvent(`Command '!sound5' triggered by ${user}`);
                 } else if (userMessage === "!sound6") {
                     playSound('sound6');
-                    logEvent(`Command '!sound6' triggered by ${user}`);
                 } else if (userMessage === "!sound7") {
                     playSound('sound7');
-                    logEvent(`Command '!sound7' triggered by ${user}`);
                 } else if (userMessage === "!sound8") {
                     playSound('sound8');
-                    logEvent(`Command '!sound8' triggered by ${user}`);
                 } else if (userMessage === "!sound9") {
                     playSound('sound9');
-                    logEvent(`Command '!sound9' triggered by ${user}`);
                 } else if (userMessage === "!sound10") {
                     playSound('sound10');
-                    logEvent(`Command '!sound10' triggered by ${user}`);
                 } else if (userMessage === "!help") {
                     sendMessageToChat("Available commands: !sound1, !sound2, !sound3, !sound4, !sound5, !sound6, !sound7, !sound8, !sound9, !sound10");
-                    logEvent(`Command '!help' triggered by ${user}`);
                 } else {
                     speakText(userMessage);
-                    logEvent(`Message '${userMessage}' read aloud by ${user}`);
                 }
             }
         };
