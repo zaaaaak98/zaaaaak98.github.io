@@ -120,12 +120,12 @@
         // Text-to-Speech Functionality
         function speakText(text) {
             const speech = new SpeechSynthesisUtterance(text);
-            speech.lang = 'en-UK';  // Set language
+            speech.lang = 'en-US';  // Set language
             window.speechSynthesis.speak(speech);
         }
 
         // Prompt user for Twitch channel name
-        const twitchChannel = zaaaaak98;
+        const twitchChannel = prompt("Enter your Twitch channel name:");
 
         // Connect to Twitch Chat as anonymous user
         const ws = new WebSocket('wss://irc-ws.chat.twitch.tv:443');
