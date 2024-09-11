@@ -65,6 +65,10 @@
         <input type="range" id="ttsVolume" min="0" max="1" step="0.1" value="1">
     </div>
 
+    <div>
+        <button id="sendHelpButton" onclick="sendHelpMessage()">Send !help</button>
+    </div>
+
     <script>
         let isPlaying = false;
         const twitchChannel = prompt("Enter your Twitch channel name:").toLowerCase();
@@ -136,7 +140,16 @@
         }
 
         function sendMessageToChat(message) {
-            ws.send(`PRIVMSG #${twitchChannel} :${message}`);
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send(`PRIVMSG #${twitchChannel} :${message}`);
+                console.log(`Sent message: ${message}`);
+            } else {
+                console.error('WebSocket is not open. Cannot send message.');
+            }
+        }
+
+        function sendHelpMessage() {
+            sendMessageToChat("Available commands: !sound1, !sound2, !sound3, !sound4, !sound5, !sound6, !sound7, !sound8, !sound9, !sound10");
         }
 
         const ws = new WebSocket('wss://irc-ws.chat.twitch.tv:443');
