@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundboard with TTS and 10 Sounds</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        button {
+            background-color: #61dafb;
+            border: none;
+            color: #282c34;
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #21a1f1;
+        }
+        button:disabled {
+            background-color: #aaaaaa;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stream Soundboard with TTS and 10 Sounds</h1>
+    <p>Click a button or type commands in Twitch chat to play a sound!</p>
+
+    <div>
+        <button id="sound1Button" onclick="playSound('sound1')">Sound 1</button>
+        <button id="sound2Button" onclick="playSound('sound2')">Sound 2</button>
+        <button id="sound3Button" onclick="playSound('sound3')">Sound 3</button>
+        <button id="sound4Button" onclick="playSound('sound4')">Sound 4</button>
+        <button id="sound5Button" onclick="playSound('sound5')">Sound 5</button>
+    </div>
+    <div>
+        <button id="sound6Button" onclick="playSound('sound6')">Sound 6</button>
+        <button id="sound7Button" onclick="playSound('sound7')">Sound 7</button>
+        <button id="sound8Button" onclick="playSound('sound8')">Sound 8</button>
+        <button id="sound9Button" onclick="playSound('sound9')">Sound 9</button>
+        <button id="sound10Button" onclick="playSound('sound10')">Sound 10</button>
+    </div>
+
+    <script>
+        let isPlaying = false;
+
+        function playSound(sound) {
+            if (isPlaying) return;
+
+            let audio;
+            switch (sound) {
+                case 'sound1':
+                    audio = new Audio('https://example.com/sounds/sound1.mp3');
+                    break;
+                case 'sound2':
+                    audio = new Audio('https://example.com/sounds/sound2.mp3');
+                    break;
+                case 'sound3':
+                    audio = new Audio('https://example.com/sounds/sound3.mp3');
+                    break;
+                case 'sound4':
+                    audio = new Audio('https://example.com/sounds/sound4.mp3');
+                    break;
+                case 'sound5':
+                    audio = new Audio('https://example.com/sounds/sound5.mp3');
+                    break;
+                case 'sound6':
+                    audio = new Audio('https://example.com/sounds/sound6.mp3');
+                    break;
+                case 'sound7':
+                    audio = new Audio('https://example.com/sounds/sound7.mp3');
+                    break;
+                case 'sound8':
+                    audio = new Audio('https://example.com/sounds/sound8.mp3');
+                    break;
+                case 'sound9':
+                    audio = new Audio('https://example.com/sounds/sound9.mp3');
+                    break;
+                case 'sound10':
+                    audio = new Audio('https://example.com/sounds/sound10.mp3');
+                    break;
+                default:
+                    console.error('Invalid sound');
+                    return;
+            }
+
+            isPlaying = true;
+            disableButtons(true);
+
+            audio.play();
+
+            audio.onended = function() {
+                isPlaying = false;
+                disableButtons(false);
+            };
+        }
+
+        function disableButtons(state) {
+            for (let i = 1; i <= 10; i++) {
+                document.getElementById(`sound${i}Button`).disabled = state;
+            }
+        }
+
+        // Text-to-Speech Functionality
+        function speakText(text) {
+            const speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'en-US';  // Set language
+            window.speechSynthesis.speak(speech);
+        }
+
+        // Prompt user for Twitch channel name
+        const twitchChannel = prompt("Enter your Twitch channel name:");
+
+        // Connect to Twitch Chat as anonymous user
+        const ws = new WebSocket('wss://irc-ws.chat.twitch.tv:443');
+
+        ws.onopen = function() {
+            console.log("Connected to Twitch chat");
+
+            // Join the specified channel
+            ws.send(`NICK justinfan12345`);  // Anonymous username
+            ws.send(`JOIN #${twitchChannel}`);
+        };
+
+        ws.onmessage = function(event) {
+            const message = event.data;
+            console.log(message);
+
+            // Check if the message contains a command to play a sound
+            if (message.includes("PRIVMSG")) {
+                const userMessage = message.split("PRIVMSG")[1].split(":")[1].trim();
+                
+                if (userMessage === "!sound1") {
+                    playSound('sound1');
+                } else if (userMessage === "!sound2") {
+                    playSound('sound2');
+                } else if (userMessage === "!sound3") {
+                    playSound('sound3');
+                } else if (userMessage === "!sound4") {
+                    playSound('sound4');
+                } else if (userMessage === "!sound5") {
+                    playSound('sound5');
+                } else if (userMessage === "!sound6") {
+                    playSound('sound6');
+                } else if (userMessage === "!sound7") {
+                    playSound('sound7');
+                } else if (userMessage === "!sound8") {
+                    playSound('sound8');
+                } else if (userMessage === "!sound9") {
+                    playSound('sound9');
+                } else if (userMessage === "!sound10") {
+                    playSound('sound10');
+                } else if (userMessage === "!help") {
+                    sendMessageToChat("Available commands: !sound1, !sound2, !sound3, !sound4, !sound5, !sound6, !sound7, !sound8, !sound9, !sound10");
+                } else {
+                    speakText(userMessage);
+                }
+            }
+        };
+
+        ws.onerror = function(error) {
+            console.error("WebSocket error:", error);
+        };
+
+        ws.onclose = function() {
+            console.log("Disconnected from Twitch chat");
+        };
+
+        function sendMessageToChat(message) {
+            ws.send(`PRIVMSG #${twitchChannel} :${message}`);
+        }
+    </script>
+</body>
+</html>
