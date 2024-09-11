@@ -132,6 +132,7 @@
 
         ws.onopen = function() {
             console.log("Connected to Twitch chat");
+            alert("Successfully connected to Twitch chat!");
 
             // Join the specified channel as an anonymous user
             ws.send(`NICK justinfan12345`);  // This is a common anonymous user for Twitch chat
@@ -176,10 +177,12 @@
 
         ws.onerror = function(error) {
             console.error("WebSocket error:", error);
+            alert("Failed to connect to Twitch chat. Check the console for details.");
         };
 
         ws.onclose = function() {
             console.log("Disconnected from Twitch chat");
+            alert("Disconnected from Twitch chat.");
         };
     </script>
 </body>
