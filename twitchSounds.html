@@ -59,6 +59,7 @@
 
     <script>
         let isPlaying = false;
+        const twitchChannel = prompt("Enter your Twitch channel name:").toLowerCase();
 
         function playSound(sound) {
             if (isPlaying) return;
@@ -117,24 +118,23 @@
             }
         }
 
-        // Text-to-Speech Functionality
         function speakText(text) {
             const speech = new SpeechSynthesisUtterance(text);
-            speech.lang = 'en-US';  // Set language
+            speech.lang = 'en-US';
             window.speechSynthesis.speak(speech);
         }
 
-        // Prompt user for Twitch channel name
-        const twitchChannel = prompt("Enter your Twitch channel name:");
+        function sendMessageToChat(message) {
+            ws.send(`PRIVMSG #${twitchChannel} :${message}`);
+        }
 
-        // Connect to Twitch Chat as anonymous user
         const ws = new WebSocket('wss://irc-ws.chat.twitch.tv:443');
 
         ws.onopen = function() {
             console.log("Connected to Twitch chat");
 
-            // Join the specified channel
-            ws.send(`NICK justinfan12345`);  // Anonymous username
+            // Join the specified channel as an anonymous user
+            ws.send(`NICK justinfan12345`);  // This is a common anonymous user for Twitch chat
             ws.send(`JOIN #${twitchChannel}`);
         };
 
@@ -181,10 +181,6 @@
         ws.onclose = function() {
             console.log("Disconnected from Twitch chat");
         };
-
-        function sendMessageToChat(message) {
-            ws.send(`PRIVMSG #${twitchChannel} :${message}`);
-        }
     </script>
 </body>
 </html>
