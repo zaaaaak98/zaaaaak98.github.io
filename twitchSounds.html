@@ -232,4 +232,55 @@
                 
                 if (userMessage === "!sound1") {
                     playSound('sound1');
-                    logEvent(`Command '!sound1' triggered by
+                    logEvent(`Command '!sound1' triggered by ${user}`);
+                } else if (userMessage === "!sound2") {
+                    playSound('sound2');
+                    logEvent(`Command '!sound2' triggered by ${user}`);
+                } else if (userMessage === "!sound3") {
+                    playSound('sound3');
+                    logEvent(`Command '!sound3' triggered by ${user}`);
+                } else if (userMessage === "!sound4") {
+                    playSound('sound4');
+                    logEvent(`Command '!sound4' triggered by ${user}`);
+                } else if (userMessage === "!sound5") {
+                    playSound('sound5');
+                    logEvent(`Command '!sound5' triggered by ${user}`);
+                } else if (userMessage === "!sound6") {
+                    playSound('sound6');
+                    logEvent(`Command '!sound6' triggered by ${user}`);
+                } else if (userMessage === "!sound7") {
+                    playSound('sound7');
+                    logEvent(`Command '!sound7' triggered by ${user}`);
+                } else if (userMessage === "!sound8") {
+                    playSound('sound8');
+                    logEvent(`Command '!sound8' triggered by ${user}`);
+                } else if (userMessage === "!sound9") {
+                    playSound('sound9');
+                    logEvent(`Command '!sound9' triggered by ${user}`);
+                } else if (userMessage === "!sound10") {
+                    playSound('sound10');
+                    logEvent(`Command '!sound10' triggered by ${user}`);
+                } else if (userMessage === "!help") {
+                    sendMessageToChat("Available commands: !sound1, !sound2, !sound3, !sound4, !sound5, !sound6, !sound7, !sound8, !sound9, !sound10");
+                    logEvent(`Command '!help' triggered by ${user}`);
+                } else {
+                    speakText(userMessage);
+                    logEvent(`Message '${userMessage}' read aloud by ${user}`);
+                }
+            }
+        };
+
+        ws.onerror = function(error) {
+            console.error("WebSocket error:", error);
+        };
+
+        ws.onclose = function() {
+            console.log("Disconnected from Twitch chat");
+        };
+
+        function sendMessageToChat(message) {
+            ws.send(`PRIVMSG #${twitchChannel} :${message}`);
+        }
+    </script>
+</body>
+</html>
