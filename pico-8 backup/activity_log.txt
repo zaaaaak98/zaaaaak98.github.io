@@ -172,3 +172,16 @@
  irrrrrrrr_rrrri.i.........irrrrrrrrrrrr___rr_________r_________rr__r_________irr
  rrrrrrrriii.........i...i.........icmmmmmm.mm..mmmmmirrrrrrrrrrrri.........irrrr
  rrrrrr
+2024-09-22 19:14:47 C:/Users/zakad/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiii
+2024-09-22 19:14:59 C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ iii.........ii.........ii.icrriimmmmmmmmmmmmmmmmmmmmmmm.........mmmm.........mir
+ rrrrrrr____rrr_________r_________rrrrrrrrr____rr_____ii.........irrrrrrrrrrii...
+ .....iiirrrrrrrri.........irrrrrrrrrii.....irrrrrrrr____rrimirrrrrrrr__ri......i
+ iii.........irrrrrrrrrr_i.....mrrrrrrrrrr_i.........iirrrrrrrrrr__i.......i.....
+ ....ii.........rrrrrrrr_rrrrrrrrr_________rr_________rimmm.........mmmmmmmmmm...
+ ......mirri.....irrrrrrr_rii.i.mirrrrrrr_rrr_________rrrrrrrrrr_iimmmmm.m..mmmmm
+ mmmmmmmm.........mmm.mmmmm.m.........mmm..mmmmmmmmmmmm.........mmmmmm.........mg
+ cirrrrrrrrrrri.........mrrrrrrrrrr___r_________rrrrii.........iiirrrrrrrrrm.....
+ ...irrrrrrrrrrr__iii.........irrrrrrrrrrri..i..iirrrrrrr_rrr___irrrrrrrrrrrr____
+ 

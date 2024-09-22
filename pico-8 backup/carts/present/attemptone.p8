@@ -35,9 +35,9 @@ end
 function update_game_map_one()
  --code for game map logic
  playermovement()
- enter_scene_one(20,28,24,32)
- enter_scene_one(36,44,24,32)
- enter_scene_one(52,60,24,32)
+ enter_superdry(20,28,24,32)
+ enter_superdry(36,44,24,32)
+ enter_superdry(52,60,24,32)
  if y>64 and scene==0 then
   y = 64
  end
@@ -117,6 +117,8 @@ function draw_scene_one()
  elseif scene==2 and cutscene then x=32 scene_two_dialogue()
  elseif scene==3 and cutscene then x=48 scene_three_dialogue() end
  y=30
+ _draw = draw_game_map_one
+ _update = update_game_map_one
 end
 
 _update = update_menu
@@ -198,7 +200,7 @@ function scene_three()
 	_update = update_scene_three
 end
 
-function enter_scene_one(x_one,x_two,y_one,y_two)
+function enter_superdry(x_one,x_two,y_one,y_two)
  if x>x_one and x<x_two then
   if y>y_one and y<y_two then
    if btnp(❎) and scene==1 then
@@ -250,13 +252,19 @@ function instructions()
 	sleep(5)
 	cls()
 end
+
 --working on this
 function scene_one_dialogue()
+ speaker(1)
  speak("line one test.", 1)
  speak("line two test.", 2)
  speak("line three test.", 3)
+ remove_speaker(1)
  sleep(3)
- rectfill(4,80,124,124)
+ speaker(2)
+ speak("line one test annie",1)
+ sleep(3)
+ remove_speaker(2)
  cutscene = false
 end
 
@@ -278,6 +286,22 @@ function speak(words, lines)
   current_text = current_text .. sub(words, i, i)  -- add one letter at a time
   print(current_text, x, y)
   flip()  -- wait for a frame to simulate typewriter effect
+ end
+end
+
+function speaker(person)
+ if person==1 then
+  print("izaak", 8, 68)
+ else
+  print("annie", 96, 68)
+ end
+end
+
+function remove_speaker(person)
+ if person==1 then
+ print("izaak", 8, 68,"black")
+ else
+  print("annie", 96, 68,"black")
  end
 end
 __gfx__
