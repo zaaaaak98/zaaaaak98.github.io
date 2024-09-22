@@ -1,0 +1,174 @@
+
+2024-08-28 10:33:39 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled.p8
+ i.i....
+2024-08-28 10:34:10 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled.p8
+ ii..i.iii.........icii.cgggcmmm
+2024-08-28 13:35:06 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled.p8
+ iciiiic.ccccc.iii.ccciiiiiii
+2024-08-28 13:36:30 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ iii
+2024-08-28 13:37:31 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiiii.....ii.........i
+2024-08-28 13:40:04 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ ii.i
+2024-08-28 18:01:03 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iii.iii
+2024-08-28 18:01:24 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ ccc
+2024-08-28 18:08:22 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiii...ii
+2024-08-28 18:08:49 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ iccgggggggggggggggggg.g..gggggg....ggggggggggggggggcccccccciiii..igg.g.g.....gcc
+ cccccccccccc.........c.........iici.iccccrri.........iccccggggggggggg.gg.ggggggg
+ gggggggmgggggggmmmmmmmmmmmmmmmmmmmmmmggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggmmmmmmmgggggggggggmmmmmmmmmmmmmm.mmmmmmm..mmmmmmmgggg
+ ggmmmmmmmmmmmmm.........mmm...mmggggggggggggggggggggggggggggggggggggmmmmmmmmm.gc
+ cmgmmmmmgggggggggggggmmmmmmgggmggggmmmmmggggggggggggggmggmggggggmgggggggggggcmmg
+ ggggggggmmm.ccccccccc.cmmmmmmmmmmmmm.mg........gcccmgcirimmmcccirgmmmmgmmmmmmmmm
+ iimcrrgm..mmmmmm...mggggggmmmggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggmmmmmm.........mmmc.cccccccccccccc...ccc.........c...ccccrirmmmmm.mmccccccccc
+ c..cc..cccc.ccccccccc.ccccc.ccccccccccccccricccc....ccccccccccccccccc....cccc...
+ ccccccccccccirrc.ccccccrrc.........cccc.........cc.........iii..iiiiiiiiiiiii...
+ ......ii...ii.i.........iiciii.
+2024-08-28 22:14:56 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiiiii......i...
+2024-08-28 22:15:44 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8
+ irrii
+2024-08-28 22:16:12 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iii
+2024-08-28 22:16:21 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8
+ ircii
+2024-08-28 22:16:36 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ i.ccccccc.cccccccccccccccccccccccccccccccii.cii.cccc..cc.cc...iiicccrrriccccccir
+ ccc.........cccccc.ccc.cc.ccccccci.ccrrrccccccc.........cccc.ccccccccccccccccric
+ ccccccrri.........cccccrrrcccccircc.c...c....ccccc.ccc.cc.imm.m.m.cccmcccccccccc
+ ccccccccc.ccccccccccccc.cc.........ii.ccccccccccriccrrrrrrrrrriccccccccirrrrrc.c
+ .cccrrrrcrrcccciricc.......c.ccccc.crricrrrcc.cccccicirrrccccccccccccccccrrrc.cc
+ ccrrrcccccrrc.......cccccccccccccccccccccccrrc.cc.c.........cccrcccricccccccrccc
+ ccirrrc..rigg.ggggggggrggggggg.g.ggggirigggggggggrrg.........g.........g........
+ .g.........g.........g.........ggggggggggg.........gggmmmmmm....m.........mmmmcc
+ cmmcc.........ctrriccrrrrrrrrrr_rrrrccc.cccccccirrrccrrrrrrrr____immmirr_r______
+ ___r_________r__rrgcc.cccccccicc.cccc.....ccccccircccrrrrcc.cccc.........crii.ir
+ rrrcc........cirrrrrrrc..cirri.cciirrrrrrr__r_rrrrrr_________rr_________cii.....
+ .irrrc.........cirrrrcc..cmmmm......m.........m.........mrrrrr_________rrrrrr___
+ ______rrrr_rmm.........irrrrr_ii..rrrii......irri.......irrrrii.........irrrr___
+ ______r_rrrrirri.........irrri..irrrr_r_________rmggg.gggggggmmmmmmmmmmmmmgggggg
+ gggggggggggggggggmmmmmmggggggggmmmggggggggggggggggmmmmmmmmmmmgggggggggggggmmgggg
+ gggmggggmgggggggggggggggg.ggggm.........mm....mmmmmm.........iiii..mgcc.........
+ c.........gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg.mmmmmmm
+ mccirrrimgg.........ggg.gggggggggggggggggggggggmmmmmggggggmg....g.........g.....
+ ....g.......g.........ggg.gggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggg.gggggggggmm.m...m.........mmmmmmmmmmmmmmm...m.........m........m.mm..
+ .......m
+2024-08-30 21:37:31 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiiii
+2024-08-30 21:37:46 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ ii.iiicmggggggggggirgg........ii
+2024-08-30 21:40:05 C:/Users/Izaak/AppData/Roaming/pico-8/carts/pixel_movement.p8.png
+ irgc.ccc.cc....c....cc.c.........c.........cii
+2024-08-30 21:47:41 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ irrric.c.cccccccccccccccccc.irccccccccccccccccccccccccirircccccccccccccccccccccc
+ cccccc.cccccccccccccccccc...cccccccccc...cccicii.ccirrrcc..cc..cc.cc..cccccc..cc
+ c..cc......c.........ccc....c........cccccc...cccccccccccccccccccccccccccccccccc
+ ccccccrrrc....ccc.ccccccccccccc....cirrccccccccc.........cc.ccircmmmmm.mmccrrrrr
+ rrr_cccccccccccccccccccc.ccccccc..cc...cccc.cccc.ccccccccccccccccccccccrrrrrrrcc
+ ...cccccc.ccccccrrcccccccccccccccccccccccirrrrcccc..rrcc.........rrrrrrrcciiirr_
+ rrrr_________rc
+2024-08-30 22:13:33 C:/Users/Izaak/AppData/Roaming/pico-8/bbs/carts/fupunomamo-0.p8.png
+ ppppi
+2024-08-30 22:13:54 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ rrrrr__rrcgsstgc..rriir_r_rrrccccccccccccccccccccccccccc..ccccccccccccc...cccccc
+ ccccccccccccccccc.c.i.........cirrcccccrcccciiccccirrrrccirrrrcccrrrrcccirrrr_cc
+ cccccccccrrrrrccccccrrrrrricccccccccrrrrrrcccccccccrrrrrriccccccirrrrriccccccccc
+ cccccccccccccccccirrrrrrrrccccicccccccrrrrrrrrcccccccccccrrrrrrrrrcmmmmm.mmmgggg
+ ggmmggmmmm.ccccccc.cc....ccc..ccccccc......cccccccirrrrrrrrrrrrrccc.ccc.ccirrrrr
+ rrrrrc......ccccccirrrrrrrrc.........ccc.........cc
+2024-09-01 10:44:54 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiii.ii
+2024-09-01 10:45:15 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ cccccccccccccccccccccc
+2024-09-01 20:16:07 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiiii
+2024-09-01 20:16:22 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ ccc.........cirrrrrrrrrrrrrrcggggggggggggg.ggggg.gggg.gggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggggggggggggggggggggg......gggggggg.mmmm.mmrrrrrrrrmm..
+ ...m....mmrrrrrrrrrrr_________mmmmmmmmmmmmm.mmmm.ggggggggggggggggggggg.....gmgmg
+ ..gggggggggggggggggggggggggggggggmmmmmmmmmmmmmmmmmmmmmmmmmgggggggggggmgggggmmmmm
+ mmmm.mmmmggggggggggggggmmmmm.m....mm.........mmm..rrrrrrrr___rr_r_______rrrrrrrr
+ rr_________immimirrrrrrrrrmmmmm.........irrrrrrrrr___rmmmmmm...mimm....m........
+ .mmm.....mmmmmmm.........mmmmggggggggggggmmmm.gggggggggggmggggggggmmggggggm.....
+ ....mggmm..m..gggggggggggggg.........gggggggggggggggggggggggggggggggggggg..mmmmm
+ mmmmm.........mm....m.m.girrrrrrrrr_igggggggggggggggggggggggmmmmmmmmmmggmmmgrrrr
+ rrrr_________immmmmmmmcgmmmmmmmirrrrrrrrrmmmrrrrrrrrrrmm.........mmmmmmmmmmmmmmg
+ rrrmmmmmm.........irrrrrrrrrr_m.........irrrrrrrrr__rr_________rrrrrrrrr________
+ _rrrrrrrrr_________rrrrrrrr______rirrrrrrrrr_______irrrrrrrr________r_________r_
+ ________rr_________rrr_________irrrrrrrrrr_________rr_______rrr_________r_______
+ __immmmmmm.........m.mmm.........m.........irrrrrrrrrmm........mirrrrrrrrrrr__r_
+ ____r_________iirrrrrrrrrim.........irrrrrrrrrr___rmmmmmmmmmmmmmmmmmmmmggggggggg
+ mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+ mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmiirrrrrrrrrmmmmmmmmmmmirrrrrrrrr_mm.......
+ ..iirrrrrrrrr______irrrrrrrrr_rm......mmmmm....mgggg.ggggggggggggggggggsssssssss
+ sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssscg.gc
+2024-09-05 14:45:17 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiii
+2024-09-05 14:45:29 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ riiciirrrrrrrrrrrrrrrrrrrrrrrrrc
+2024-09-05 20:34:10 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ i.........iii
+2024-09-05 20:59:06 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ iii.........icscccc.cc.........c..cc...ccc..cc.....cccccccc....ccccccccccc.c....
+ .....cc.ccccccccccccccccccccccccccccccc.........cc.ccccc.ccccccccccccccccccccccc
+ ccirrrrrrrrrrrrrrrrrrrrrrr______rr___rccc.cc..cccccccccc.ccccccccciirrrrrrrrrrri
+ cc.c.........ccccc........cc..cccccccc...cccccccc...ccccrrrrrrrrrrrrrrrcccirrrrr
+ rrrrrrrcccccccirrrrrrrrrccccrrrrrrricc.........cccccc..irrrrrriccccccccc.cc..c..
+ .......cccirrrrrrrrccc.........ccccc..ccccccccc...cc..cccc..cccccccc.cccccccccc.
+ .cccccccc.ccccccccccccccccccccccccccccc......ccc.ccc..ccccccccccc..ccc..ccccc...
+ ....ccc.........c...ccccccccccccccccc.ccccccccccccc.........c....cci.ccccriciccc
+ i...cccicirrrrrrrr_rrrc...cc....cc...c.........cccccrrrrrrrrrrrrrrrcccc......ccc
+ .....irrrrrrrrrrrric.c...cc.........cccccc.....ccc.....ccccccc..cc.ccc.cccrrrrrr
+ rrrrc.ccccccccccccccccccccccccccccccccccccccccccccrrrrrrrrrcc.........c...cc.ccc
+ ..ccccccccccccc..cccccc..cccc.crrrrrrrrrrccc..ccccc.c....ccc.cc.c..c.........cc.
+ c.cccccc.cc...ccc.cccc......c..cc.........c.c......ccmmm.m....mgccccccirrrrrrrri
+ ccccc........cc.........icrrrrrrrrrrrrrrrrrrrrrrrrrr__cc.c.c.........ccccc.c....
+ .....c.c....c.........c.........ccccccccccccccccccccccccc.cccccccccccccccccccc..
+ crrrrrrrrrrrrrccirrrrrrrrrrrr_rc.c.c....c.rcmmm......mm....m.....mirrrrrrrrmm...
+ ......mirrrrrrrrrm.....mmirrrrrrrrr_rr_________rirrrrrrrrrrm.......mm...m.mgiii
+2024-09-06 22:20:23 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiii
+2024-09-06 22:20:37 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ iirr_________rrr_rrrrrrrrrrrr_________r_________r_________rrrrrrrrrr_________r__
+ _rirrrrrrrrrc.c.........ccc.........irrrrrrrri.cc.cirrrrrrri....ic.........ci...
+ ....i..i.........crrrrrrrriic...c....cirrrrrrri..icc..i.........i.........i.....
+ ....i.........irrrrrrrr_c.........ccc....cirrrrrrrrrrr___cc.........irrrrrrrr___
+ c..crrrrrrrrrrrrriii.........ii.crrrrrrrrrrrr__cc....crrrrrrrrrrrii..iirrrrrrrrr
+ rrcc.........cc.........cirrrrrrrr__rrrri...irrrrrrrr_rrrrc.........irrrrrrrrrrr
+ cc.........cirrrrrrrrrrri.........iicrrrrrrrrrrrrc.........irrrrrrrrrc.........c
+ cirrrrrrrrrrrii..c.........ii.........i
+2024-09-08 10:06:22 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiiiii
+2024-09-08 10:06:40 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ rrrrrrrrrri
+2024-09-08 10:44:35 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ ii
+2024-09-08 10:44:41 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ iccccccc.........c.c.ccc.........icciiicc.........iirrrrrrrrr__rr_rr_r___rirrrrr
+ rrr_ric.cirrrrrrrrrri.....i.........iiiii.....irrrrrrrrrrrii.........iirrrrrrr__
+ _rrrri....ii.........cirrrrrrrrrrr_ii.i.......iirrrrrrrrrrrrii.irrrrrrrr__rrrri.
+ ....irrrrrrrrrrrrri......iirrrrrrrr_rrrrrii.........ii.iiir.i.....irrrrrrrrii...
+ ......irrrrrrrii...irrrrrrrr_____ri..i....rrrrrrrrrrrrrri.........irrrrrrrrrrrrr
+ rrrrrri.........i.........irrrrrrrr___rrrrrrrrrrii.........irrrrrrrrrrrrrrrr_ii.
+ ........i
+2024-09-09 21:05:35 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iii
+2024-09-09 21:05:44 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ iiiiiiii....rri.ii.........i........i....i.........
+2024-09-09 21:23:55 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ ii
+2024-09-09 21:24:01 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ iii.iriiiii.....iii.........i.........
+2024-09-09 21:35:30 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiii
+2024-09-09 21:35:42 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ irrrrrrrr_rrrri.i.........irrrrrrrrrrrr___rr_________r_________rr__r_________irr
+ rrrrrrrriii.........i...i.........icmmmmmm.mm..mmmmmirrrrrrrrrrrri.........irrrr
+ rrrrrr
