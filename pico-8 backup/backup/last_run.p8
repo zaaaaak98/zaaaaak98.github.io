@@ -256,19 +256,15 @@ end
 --working on this
 function scene_one_dialogue()
  speaker(1)
- speak("line one test.", 1, false)
- speak("line two test.", 2, false)
- speak("line three test.", 3, false)
+ speak("line one test.", 1)
+ speak("line two test.", 2)
+ speak("line three test.", 3)
  remove_speaker(1)
- speak("line one test.", 1, true)
- speak("line two test.", 2, true)
- speak("line three test.", 3, true)
  sleep(3)
  speaker(2)
- speak("line one test annie",1, false)
+ speak("line one test annie",1)
  sleep(3)
  remove_speaker(2)
- speak("line one test annie",1, true)
  cutscene = false
 end
 
@@ -281,19 +277,15 @@ function scene_three_dialogue()
 end
 
 --max 29 char 1 full stop
-function speak(words, lines, remove)
+function speak(words, lines)
  local x = 4
  local y = 80 + (lines - 1) * 8  -- calculate y position based on line number
- if remove then
-	print(words,"black")
- else
-  local current_text = ""
-  -- Typewriter effect: print one letter at a time
-  for i = 1, #words do
-   current_text = current_text .. sub(words, i, i)  -- add one letter at a time
-   print(current_text, x, y)
-   flip()  -- wait for a frame to simulate typewriter effect
-  end
+ local current_text = ""
+ -- Typewriter effect: print one letter at a time
+ for i = 1, #words do
+  current_text = current_text .. sub(words, i, i)  -- add one letter at a time
+  print(current_text, x, y)
+  flip()  -- wait for a frame to simulate typewriter effect
  end
 end
 
