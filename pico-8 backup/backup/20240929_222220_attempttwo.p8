@@ -1,73 +1,80 @@
 pico-8 cartridge // http://www.pico-8.com
 version 42
 __lua__
---game code
+-- Initialize game variables
 function _init()
- x=0
- y=5
- izaak=1
- annie=3
- w=5
- --mx used to help with map 
- --select
- mx = 1
- scene = 0
+ x=0   -- player x position
+ y=5   -- player y position
+ izaak=1  -- sprite for the main character Izaak
+ annie=3  -- sprite for the character Annie
+ w=5   -- used to control animation speed
+ mx = 1 -- map selection flag
+ scene = 0 -- keeps track of game scene state
 end
 
+-- Function to handle menu updates
 function update_menu()
- --code for menu logic
+ -- If the player presses the X button (❎), start the game
  if btnp(❎) then
- --start game
- openingscene()
- instructions()
- mapone()
- _init()
+   openingscene()    -- Show opening scene
+   instructions()    -- Show game instructions
+   mapone()          -- Load first map
+   _init()           -- Reinitialize game
  end
 end
 
+-- Function to draw the menu
 function draw_menu()
- --code for drawing menu
- cls()
- print("enjoy your present",30,63)
- print("press ❎ to play",30,70)
+ cls()  -- clear screen
+ print("enjoy your present",30,63)  -- display title
+ print("press ❎ to play",30,70)    -- prompt to start the game
 end
 
+-- Update function for game map one
 function update_game_map_one()
- --code for game map logic
- playermovement()
+ playermovement() -- Handles player movement
+ -- Check for player entering specific areas (Superdry stores)
  enter_superdry(20,28,24,32)
  enter_superdry(36,44,24,32)
  enter_superdry(52,60,24,32)
+ -- Restrict player from moving off the map
  if y>64 and scene==0 then
   y = 64
  end
+ -- Change to second map if player moves past the right edge of the screen
  if x>124 and mx != 2 then
-  maptwo()
-  enter_left()
+  maptwo()    -- Load second map
+  enter_left() -- Move player to the left side of the new map
  end       
 end
 
+-- Update function for game map two
 function update_game_map_two()
- --code for game map logic
-	playermovement()
+ playermovement() -- Handles player movement
+
+ -- Return to first map if player moves past the left edge of the screen
  if x<0 and mx != 1 then
-  mapone()
-  enter_right()
+  mapone()    -- Load first map
+  enter_right() -- Move player to the right side of the first map
  end
+
+ -- Restrict player from moving off the map
  if y>64 and scene==0 then
   y = 64
  end
 end
 
+-- Drawing the first game map
 function draw_game_map_one()
-	--code for drawing map
- showmap(1)
- spr(izaak,x,y)
- printcoords()
+ showmap(1)   -- Display map one
+ spr(izaak,x,y) -- Draw Izaak's sprite at current x and y coordinates
+ printcoords()  -- Debugging: print coordinates for tracking
+
+ -- Detect if the player is in certain regions and prompt action
  if y>24 and y<32 then
   if x>20 and x<28 then
-   pressx()
-   scene = 1
+   pressx()  -- Show "press X to enter" prompt
+   scene = 1  -- Set current scene
   elseif x>36 and x<44 then
    pressx()
    scene = 2
@@ -77,18 +84,21 @@ function draw_game_map_one()
   elseif x>92 and x<100 then
    pressx()
    scene = 4
-  else scene = 0
+  else
+   scene = 0
   end 
  end
 end
 
+-- Drawing the second game map
 function draw_game_map_two()
- showmap(2)
- spr(izaak,x,y)
- printcoords()
+ showmap(2)   -- Display map two
+ spr(izaak,x,y) -- Draw Izaak's sprite at current x and y coordinates
+ printcoords()  -- Debugging: print coordinates for tracking
+ -- Detect if the player is in certain regions and prompt action
  if y>24 and y<32 then
   if x>22 and x<26 then
-   pressx()
+   pressx()  -- Show "press X to enter" prompt
    scene = 5
   elseif x>46 and x<50 then
    pressx()
@@ -99,123 +109,131 @@ function draw_game_map_two()
   elseif x>102 and x<106 then
    pressx()
    scene = 8
-  else scene = 0
+  else
+   scene = 0
   end
  end
 end
 
+-- Update function for scene one
 function update_scene_one()
- --code for scene one goes here
+ -- Trigger scene dialogue if the player presses X
  playermovement()
- --printcoords()
- if btnp(❎) and scene == 1 then
-  scene_one_dialogue()
-  x=15
- end
-  
 end
 
+-- Update functions for other scenes
 function update_scene_two()
  if btnp(❎) then
-  --start game
-  mapone()
+  mapone() -- Go back to map one
  end
 end
 
 function update_scene_three()
  if btnp(❎) then
-  --start game
-  mapone()
+  mapone() -- Go back to map one
  end
 end
 
+-- Draw the first scene
 function draw_scene_one()
- cls()
- showmap(3)
- --moves player off of level start position
- spr(izaak,x,y)
- spr(annie, 112, 168)
- if scene==1 then
-  cutscene = true
-  scene_one_dialogue() 
+ showmap(3) -- draw part of the map
+ spr(1, x, 40) -- draw Izaak's sprite
+ spr(3, 100, 40) -- draw Annie's sprite
+ -- Draw based on scene state
+ cutscene = true
+ if scene==1 and x==82 then
+  scene_one_dialogue() -- Dialogue for scene one
   x=15
- elseif scene==2 and cutscene then 
-  scene_two_dialogue() 
+ elseif scene==2 and cutscene then
+  scene_two_dialogue() -- Dialogue for scene two
   x=32
- elseif scene==3 and cutscene then 
+ elseif scene==3 and cutscene then
   x=48 
-  scene_three_dialogue() 
+  scene_three_dialogue() -- Dialogue for scene three
  end
- y=30
- _draw = draw_game_map_one
- _update = update_game_map_one
+ if cutscene == false then  
+  y=30 -- Adjust y position
+  _draw = draw_game_map_one -- Set drawing function back to game map
+  _update = update_game_map_one -- Set update function back to game map
+ end
 end
 
+-- Set initial update and draw functions for the game
 _update = update_menu
 _draw = draw_menu
 -->8
 --player code
 
+-- Initialize player variables
 function playerinit()
  x = 0
  y = 5
 end
 
---get character on right side of screen
+-- Move player to right edge of the screen
 function enter_right()
  x = 124
 end
 
---get character on left side of screen
+-- Move player to left edge of the screen
 function enter_left()
  x = 0
 end
 
---player movement function
+-- Player movement function
 function playermovement()
- if btn(0) then x-=1 end
- if btn(1) then x+=1 end
- if btn(2) then y-=1 end
- if btn(3) then y+=1 end
+ -- Check button input for player movement
+ if btn(0) then x-=1 end -- move left
+ if btn(1) then x+=1 end -- move right
+ if btn(2) then y-=1 end -- move up
+ if btn(3) then y+=1 end -- move down
+
+ -- Animate the character sprite
  w=w-1
  if w<0 then
   izaak+=1
-  if izaak > 2 then izaak = 1 end
-  w = 5
+  if izaak > 2 then izaak = 1 end -- Loop between two sprites
+  w = 5 -- Reset animation counter
  end
+ 
 end
 
---coordinates print for debug
+-- Print player's coordinates (used for debugging)
 function printcoords()
  print(x, 7)
  print(y, 7)
 end
 
-
-
-
 -->8
 --map code
+
+-- Function to display the map
 function showmap(x)
- cls()
- if x == 1 then map(0,0)
- elseif x == 2 then map(16,0)
- elseif x == 3 then map(0,16)
+ cls() -- Clear screen
+ if x == 1 then
+  map(0,0) -- Show first map
+ elseif x == 2 then
+  map(16,0) -- Show second map
+ elseif x == 3 then
+  map(0,16)
  end
 end
 
+-- Load first map
 function mapone()
  _draw = draw_game_map_one
  _update = update_game_map_one
  mx = 1
 end
 
+-- Load second map
 function maptwo()
  _draw = draw_game_map_two
  _update = update_game_map_two
  mx = 2
 end
 
+-- Handle different scenes
 function scene_one()
  _draw = draw_scene_one
  _update = update_scene_one
@@ -231,15 +249,17 @@ function scene_three()
  _update = update_scene_three
 end
 
+-- Check if player enters a specific region (Superdry store)
 function enter_superdry(x_one,x_two,y_one,y_two)
  if x>x_one and x<x_two then
   if y>y_one and y<y_two then
+    cutscene = true
    if btnp(❎) and scene==1 then
-    scene_one()
-   elseif btnp(❎) and scene==2 then 
-   	scene_two()
+    scene_one() -- Trigger scene one
+   elseif btnp(❎) and scene==2 then
+    scene_two() -- Trigger scene two
    elseif btnp(❎) and scene==3 then
-   	scene_three()
+    scene_three() -- Trigger scene three
    end
   end
  end
@@ -248,21 +268,23 @@ end
 -->8
 --dialogue code
 
---function to allow for delay
+-- Delay function (creates pause)
 function sleep(s)
- for i=1, s*30 do flip() end
+ for i=1, s*30 do flip() end -- Pauses for s seconds
 end
 
+-- Show "press X" prompt
 function pressx()
  print("press ❎ to enter level",8,80)
 end
 
---opening credits
+-- Opening scene sequence
 function openingscene()
  cls()
  print("this is a tale about a boy")
  print("named izaak...")
  sleep(5)
+ print(" ")
  print(" ")
  print("and a girl named annie...")
  sleep(5)
@@ -272,7 +294,7 @@ function openingscene()
  sleep(5)
 end
 
---game instructions
+-- Game instructions
 function instructions()
  cls()
  print("press the arrows to move around") 
@@ -284,55 +306,77 @@ function instructions()
  cls()
 end
 
---working on this
+-- Dialogue for scene one
 function scene_one_dialogue()
  if cutscene then
+  speaker(1) -- Show Izaak speaking
+  speak("hey, how's it going?", 1)
+  speak("my name is izaak.", 2)
+  speak("what's your name?", 3)
+  sleep(3) -- Wait 3 seconds
+  remove_speaker() -- Clear dialogue box
+  speaker(2) -- Show Annie speaking
+  speak("hi, i'm annie", 1)
+  sleep(3) -- Wait 3 seconds
+  remove_speaker()
   speaker(1)
-  speak("line one test.", 1)
-  speak("line two test.", 2)
-  speak("line three test.", 3)
+  speak("nice to meet you.",1)
+  speak("have you only just started",2)
+  speak("here?",3)
   sleep(3)
   remove_speaker()
   speaker(2)
-  speak("line one test annie",1)
-  sleep(3)
+  speak("yeah, i've not been here",1)
+  speak("very long.", 2)
+  sleep(2)
   remove_speaker()
-  cutscene = false
+  speaker(1)
+  speak("how are you finding it ",1)
+  speak("so far?", 2)
+  sleep(2)
+  remove_speaker()
+  speaker(2)
+  speak("it's okay.",1)
+  sleep(2)
+  remove_speaker()
+  cutscene = false -- End cutscene
  end
 end
 
+-- Dialogue for scene two
 function scene_two_dialogue()
  speak("scene two.", 1)
-end 
+end
 
+-- Dialogue for scene three
 function scene_three_dialogue()
  speak("scene three.", 1)
 end
 
---max 29 char 1 full stop
-function speak(words, lines)
- local x = 4
- local y = 80 + (lines - 1) * 8  -- calculate y position based on line number
+-- Display dialogue text letter by letter
+function speak(words,lines)
+ local x, y = 4, 80 + (lines-1)*8 -- Position text
  local current_text = ""
- -- Typewriter effect: print one letter at a time
- for i = 1, #words do
-  current_text = current_text .. sub(words, i, i)  -- add one letter at a time
-  print(current_text, x, y, 7)
-  flip()  -- wait for a frame to simulate typewriter effect
+ for i=1,#words do
+  current_text = current_text..sub(words,i,i)
+  print(current_text,x,y,7) -- Display text
+  flip() -- Wait for next frame
  end
 end
 
+-- Display speaker name
 function speaker(person)
- if person==1 then
+ if person == 1 then
   print("izaak", 8, 68, 7)
- else
-  print("annie", 96, 68, 7)
+ elseif person == 2 then
+  print("annie", 8, 68, 7)
  end
- sleep(1/2)
+ sleep(0.5) -- Pause to show name
 end
 
+-- Clear speaker name
 function remove_speaker()
- rectfill(4,68,118,110,0)
+ rectfill(4,68,118,110,0) -- Clear the dialogue box area
  sleep(1)
 end
 __gfx__

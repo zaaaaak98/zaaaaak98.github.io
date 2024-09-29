@@ -117,19 +117,13 @@ end
 
 -- Update function for scene one
 function update_scene_one()
- playermovement()  -- Handles player movement
  -- Trigger scene dialogue if the player presses X
- if btnp(❎) and scene == 1 then
-  scene_one_dialogue()
-  x=15 -- Move player to a starting point for the next action
- end
+ playermovement()
 end
 
 -- Update functions for other scenes
 function update_scene_two()
- if btnp(❎) then
-  mapone() -- Go back to map one
- end
+ playermovement()
 end
 
 function update_scene_three()
@@ -140,31 +134,29 @@ end
 
 -- Draw the first scene
 function draw_scene_one()
- cls() -- clear screen
  showmap(3) -- draw part of the map
- spr(izaak,x,y) -- draw Izaak's sprite
- spr(annie, x+8, y+8) -- draw Annie's sprite
+ spr(1, x, 40) -- draw Izaak's sprite
+ spr(3, 100, 40) -- draw Annie's sprite
  -- Draw based on scene state
+ cutscene = true
  if scene==1 then
-  spr(64, 72, 40)  -- Draw some other sprites related to the scene
-  sleep(1)
-  if btnp(❎) then
-   print("button pressed")
-   cutscene = true  -- Start cutscene
+  print("welcome the new girl",8,80)
+  if x==82 then
    scene_one_dialogue() -- Dialogue for scene one
    x=15
+  elseif scene==2 and x==82 then
+   scene_two_dialogue() -- Dialogue for scene two
+   x=32
+  elseif scene==3 and x==82 then
+   x=48 
+   scene_three_dialogue() -- Dialogue for scene three
   end
- elseif scene==2 and cutscene then
-  scene_two_dialogue() -- Dialogue for scene two
-  x=32
- elseif scene==3 and cutscene then
-  x=48 
-  scene_three_dialogue() -- Dialogue for scene three
  end
-
- y=30 -- Adjust y position
- _draw = draw_game_map_one -- Set drawing function back to game map
- _update = update_game_map_one -- Set update function back to game map
+ if cutscene == false then  
+  y=30 -- Adjust y position
+  _draw = draw_game_map_one -- Set drawing function back to game map
+  _update = update_game_map_one -- Set update function back to game map
+ end
 end
 
 -- Set initial update and draw functions for the game
@@ -204,6 +196,7 @@ function playermovement()
   if izaak > 2 then izaak = 1 end -- Loop between two sprites
   w = 5 -- Reset animation counter
  end
+ 
 end
 
 -- Print player's coordinates (used for debugging)
@@ -261,6 +254,7 @@ end
 function enter_superdry(x_one,x_two,y_one,y_two)
  if x>x_one and x<x_two then
   if y>y_one and y<y_two then
+    cutscene = true
    if btnp(❎) and scene==1 then
     scene_one() -- Trigger scene one
    elseif btnp(❎) and scene==2 then
@@ -316,15 +310,43 @@ end
 -- Dialogue for scene one
 function scene_one_dialogue()
  if cutscene then
+  remove_speaker()
   speaker(1) -- Show Izaak speaking
-  speak("line one test.", 1)
-  speak("line two test.", 2)
-  speak("line three test.", 3)
+  speak("hey, how's it going?", 1)
+  speak("my name is izaak.", 2)
+  speak("what's your name?", 3)
   sleep(3) -- Wait 3 seconds
   remove_speaker() -- Clear dialogue box
-  speaker(2) -- Show Annie speaking
-  speak("line one test annie", 1)
+  speaker(3) -- Show Annie speaking
+  speak("hi, i'm annie.", 1)
   sleep(3) -- Wait 3 seconds
+  remove_speaker()
+  speaker(1)
+  speak("nice to meet you!",1)
+  speak("have you only just started",2)
+  speak("here?",3)
+  sleep(3)
+  remove_speaker()
+  speaker(2)
+  speak("yeah, i've not been here",1)
+  speak("very long.", 2)
+  sleep(2)
+  remove_speaker()
+  speaker(1)
+  speak("yeah, me too", 1)
+  speak("i've been here for about", 2)
+  speak("a month maybe?",3)
+  sleep(2)
+  remove_speaker()
+  speaker(1)
+  speak("how are you finding it ",1)
+  speak("so far?", 2)
+  sleep(2)
+  remove_speaker()
+  speaker(2)
+  speak("it's okay.",1)
+  sleep(2)
+  remove_speaker()
   cutscene = false -- End cutscene
  end
 end
@@ -356,7 +378,9 @@ function speaker(person)
   print("izaak", 8, 68, 7)
  elseif person == 2 then
   print("annie", 8, 68, 7)
- end
+ elseif person == 3 then
+  print("new girl", 8, 68, 7) 
+end
  sleep(0.5) -- Pause to show name
 end
 

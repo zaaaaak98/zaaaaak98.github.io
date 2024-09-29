@@ -227,3 +227,28 @@
  ......irrrrrrr__rrrrrri.........crrrrrrrrrc.........ii....iirrrrrrrrcc.........i
  mm.mmm.........m.........irrrrrrrrrrrrrm.........m....m..m.........m.........m..
  
+2024-09-29 21:20:29 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ ii
+2024-09-29 21:20:35 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ ii.........iii...ii....i.........i.........iii.........iirrrrrrrrrrrrrrr____rrrr
+ iirrrr_rrrrrrrrrrrrrrrrrrrrr__r_________rii
+2024-09-29 21:25:26 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8
+ ri.........rrrrrrrrrriiii
+2024-09-29 21:26:41 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ irrrrrrrrrrcmmmm.........mm....m...mm...m
+2024-09-29 21:34:43 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8
+ rrrrrrrrrrrim....m...mirrrrrrrri..iirrrrrrrri...irrrrrrrrrri.iii.....imm......mr
+ rrrrrrr__rii.........irrrrrrrrrm.........irrrrrrrrrii......i.........i.........i
+ .......iiirrrrrrrrr_rr__r_irrrrrrrri.........iirrrrrrrrrrrmm.........irrrrrrrii.
+ ii.........mii...iii....iii....irrrrrrrrrrr___irrrrrrrrii.....irrrrrrrrrrm...mir
+ rrrrrrrri.mmmmiimmm.........mmmm.........mmggmmm.mm.igc.........cggggggggg......
+ ...ii.imtiiii......i.ccccrrrrrrrrrrrcc........irrrrrrrrr____cc....rrrrrrrrrr___.
+ i......crrrrrrrrrr___......irrrrrrrrrrrrrrrrri......irrrrrrrrr________i....irrrr
+ rrr_____rrr_________ric..c.........irrrrrrrrrrc.........iii........rrrrrrrrrc...
+ ......irrrrrrrri.........irrrrrrrrrr_________rrrrrrrrrrrrr_________irrrrrrrr____
+ _rr_________r_________irrrrrrrrr_________rrr_iiiiiiiiiii.ii.........iiii........
+ .iiiii.........i
+2024-09-29 22:38:04 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/test.p8.png
+ i..ii
+2024-09-29 22:38:19 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8
+ 
