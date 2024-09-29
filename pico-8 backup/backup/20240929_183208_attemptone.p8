@@ -3,26 +3,26 @@ version 42
 __lua__
 --game code
 function _init()
- x=0
- y=5
- izaak=1
- annie=3
- w=5
+	x=0
+	y=5
+	izaak=1
+	annie=3
+	w=5
  --mx used to help with map 
  --select
- mx = 1
+	mx = 1
  scene = 0
 end
 
 function update_menu()
- --code for menu logic
- if btnp(❎) then
- --start game
- openingscene()
- instructions()
- mapone()
- _init()
- end
+	--code for menu logic
+	if btnp(❎) then
+	 --start game
+	 openingscene()
+	 instructions()
+	 mapone()
+	 _init()
+	end
 end
 
 function draw_menu()
@@ -105,14 +105,10 @@ function draw_game_map_two()
 end
 
 function update_scene_one()
- --code for scene one goes here
- playermovement()
+	--code for scene one goes here
+	playermovement()
  --printcoords()
- if btnp(❎) and scene == 1 then
-  scene_one_dialogue()
-  x=15
- end
-  
+
 end
 
 function update_scene_two()
@@ -135,20 +131,9 @@ function draw_scene_one()
  --moves player off of level start position
  spr(izaak,x,y)
  spr(annie, 112, 168)
- if scene==1 then
-  spr(64, 72, 40) 
-  if btnp(❎) then
-   cutscene = true
-   scene_one_dialogue() 
-   x=15
-  end
- elseif scene==2 and cutscene then 
-  scene_two_dialogue() 
-  x=32
- elseif scene==3 and cutscene then 
-  x=48 
-  scene_three_dialogue() 
- end
+ if scene==1 and cutscene then scene_one_dialogue() x=15
+ elseif scene==2 and cutscene then scene_two_dialogue() x=32
+ elseif scene==3 and cutscene then x=48 scene_three_dialogue() end
  y=30
  _draw = draw_game_map_one
  _update = update_game_map_one
@@ -160,13 +145,13 @@ _draw = draw_menu
 --player code
 
 function playerinit()
- x = 0
- y = 5
+	x = 0
+	y = 5
 end
 
 --get character on right side of screen
 function enter_right()
- x = 124
+	x = 124
 end
 
 --get character on left side of screen
@@ -176,8 +161,8 @@ end
 
 --player movement function
 function playermovement()
- if btn(0) then x-=1 end
- if btn(1) then x+=1 end
+	if btn(0) then x-=1 end
+	if btn(1) then x+=1 end
  if btn(2) then y-=1 end
  if btn(3) then y+=1 end
  w=w-1
@@ -185,13 +170,13 @@ function playermovement()
   izaak+=1
   if izaak > 2 then izaak = 1 end
   w = 5
- end
+	end
 end
 
 --coordinates print for debug
 function printcoords()
- print(x, 7)
- print(y, 7)
+	print(x, 7)
+	print(y, 7)
 end
 
 
@@ -200,36 +185,37 @@ end
 -->8
 --map code
 function showmap(x)
- cls()
- if x == 1 then map(0,0)
- elseif x == 2 then map(16,0) end
+	cls()
+	if x == 1 then map(0,0)
+	elseif x == 2 then map(16,0) end
 end
 
 function mapone()
- _draw = draw_game_map_one
- _update = update_game_map_one
- mx = 1
+	_draw = draw_game_map_one
+	_update = update_game_map_one
+	mx = 1
 end
 
 function maptwo()
- _draw = draw_game_map_two
- _update = update_game_map_two
- mx = 2
+	_draw = draw_game_map_two
+	_update = update_game_map_two
+	mx = 2
 end
 
 function scene_one()
+ cutscene=true
  _draw = draw_scene_one
  _update = update_scene_one
 end
 
 function scene_two()
- _draw = draw_scene_one
- _update = update_scene_two
+	_draw = draw_scene_one
+	_update = update_scene_two
 end
 
 function scene_three()
- _draw = draw_scene_one
- _update = update_scene_three
+	_draw = draw_scene_one
+	_update = update_scene_three
 end
 
 function enter_superdry(x_one,x_two,y_one,y_two)
@@ -251,43 +237,43 @@ end
 
 --function to allow for delay
 function sleep(s)
- for i=1, s*30 do flip() end
+	for i=1, s*30 do flip() end
 end
 
 function pressx()
- print("press ❎ to enter level",8,80)
+	print("press ❎ to enter level",8,80)
 end
 
 --opening credits
 function openingscene()
  cls()
- print("this is a tale about a boy")
- print("named izaak...")
- sleep(5)
- print(" ")
- print("and a girl named annie...")
- sleep(5)
- print(" ")
- print(" ")
- print("this story begins in 2019")
- sleep(5)
+	print("this is a tale about a boy")
+	print("named izaak...")
+	sleep(5)
+	print(" ")
+	print("and a girl named annie...")
+	sleep(5)
+    print(" ")
+    print(" ")
+	print("this story begins in 2019")
+	sleep(5)
 end
 
 --game instructions
 function instructions()
- cls()
- print("press the arrows to move around") 
- print(" ") 
- print(" ")
- print("press ❎ to interact")
- print("with objects")
- sleep(5)
- cls()
+	cls()
+	print("press the arrows to move around")
+	print(" ")
+	print(" ")
+	print("press ❎ to interact")
+	print("with objects")
+	sleep(5)
+	cls()
 end
 
 --working on this
 function scene_one_dialogue()
- if cutscene then
+ if btnp(❎) then
   speaker(1)
   speak("line one test.", 1)
   speak("line two test.", 2)
@@ -369,14 +355,8 @@ __gfx__
 444114444444224444444444d550550555555055530303055e0e0e05590909057000000000000007700000000000000700000000000000007000000000000007
 4411114444422224444444445000005000000500530303055e0e0e05590909057000000000000007700000000000000700000000000000007000000000000007
 41411414442422424444444400000000000000000000000000000000000000007000000000000007777777777777777700000000777777777000000000000007
-00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-00888800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-00888800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-00888800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-00888800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 __gff__
-0100000000000000000000000000000001000000000000010101010000000000010101010101010101000000000000000000000000000000000000000000000000010101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0100000000000000000000000000000001000000000000010101010000000000010101010101010101000000000000000000000000000000000000000000000001010101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 __map__
 101010101010101010101010101010101010101010101010101a191010101010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

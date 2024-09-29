@@ -185,3 +185,45 @@
  cirrrrrrrrrrri.........mrrrrrrrrrr___r_________rrrrii.........iiirrrrrrrrrm.....
  ...irrrrrrrrrrr__iii.........irrrrrrrrrrri..i..iirrrrrrr_rrr___irrrrrrrrrrrr____
  
+2024-09-29 16:04:03 C:/Users/zakad/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiii
+2024-09-29 16:04:15 C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attemptone.p8
+ i.....ii..iic.........ci.........iirrrrrrrrr_________r_________icmmmmmmmmmmmmmmm
+ mmmmmmmmmmmmmmmmmm.........m.........mmm....m.........mm..mm......mm...mmmm.....
+ ....mmmm..m......mrrrrrrrrr__rrrrr_________mm.m.irrrrrrrrrrri.........ii........
+ .irrrrrrrrri....irrrrrrrrrrrr_________r__r_________rrrrrrrrrri.........imggggg..
+ g.gg....iiig.....girrrrrrrrgg....irrrrrrrrrrrr_________rrrrrrrrr__rrrr______rrrr
+ rrrrrrrrrr__irrrrrrrrrrrrr_rrrrrrrrrrrrriirrrrrrrrrrrr_________rr__rr_________gm
+ m.mmmmggggmgggggggggggggggggmgggggggmmmmmmmmmmmmggggggggggggggggggggggggggmmmm.g
+ mggggggggggggggggggggggggggggg.........gggggggggggggggggggggggmgmmmm........mmgg
+ gggggggggg...ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggg.gggggggggggggggggggggg.gg.ggggggggggggggggggggggggggggggggggggg
+ .........gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggmmmmmmmmmm
+ mmmmmmmmmmmmggggggggmmmgggggggmmmm..mmgggggggmmgggmmmmmgggggggggggggggggggmmggmm
+ mm.gggggggmmgggmgggggggggmmm...mmm..m.mmmmmmmmmmmmmmmmmmmmmmmmmmmmm.........mmmm
+ gg.gggggggggggggggggggggggggggggg......ggggggggggggggg.ggggggggggggggggggggggggg
+ ggmmmmmggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ ggggggggggggggggggggggggggggggggggggggggggggggggggg.........gggggggggggggggggggg
+ gggggmmggggggggggggggggggggggggggggggggggggggggggggggmm.mmgggmmgggggggggggggggmg
+ gggmmgcmmmmggggggggggggggggggggggggggmmmmmmmmmmgmirrrrrrrrrrrrr__rrrrrrimmmmmmmm
+ mmmmmmmmmmgmmm...m.mmm........mmm.....mmmmmmggmmmmmmgggggggmmmm.........m.......
+ ..mmmmm.........mmm.........m.........m.........m......mrrrrrrrrrrrr_rrrrrrrrrrr
+ _________rr___rrrrrrrrrr_rrrrrrr_________irrrrrrrrrrrrrrrrrrrmmmmmmmmmmmmmmirrrr
+ rrrr_________rrrr_rrrrrrr_________r_________rrrrrrrr_________mgggggmmmmmgcc..mmm
+ mmm.........mm..m........m.irrrrrrrrrm.........mmrrrrrrrrrrrri.........irrrrrrrr
+ rrrrr_________irrrrrrrrrrrrr_________iii.ri..iici.........iiii.......iiirrrrrrrr
+ rri.........i.......irrrrrrrrrrrrrr_________r___r_________rirrrrrrrrrrrrmmmmmmgg
+ gggmmmmmccc.........cmmmmm.mmmmmmmmmmmmmm.........mm..irrrrrrrrrm.........mrrrrr
+ rrri.........i.i.........irrrrrrrrri.........irrrrrrrrrrrri.........irrrrrrrrrri
+ ......imrrrrrrrrii.........ii.........i.........i.........i...i....i.........i..
+ 
+2024-09-29 19:00:37 C:/Users/zakad/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iii
+2024-09-29 19:00:46 C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8
+ .......i.........ii.....i.........i.........i.i....i.....i....ii........ii.....i
+ i.........i.......i.........i.......i.........ii.........i.........i.........i..
+ irrrrrrrri..cc......cc.........c..iriiii.........rrrrrrrrci....rrrrrrrrrrrric...
+ .......i.........i.........i.........i.........i...i.........i.i...i.........imm
+ ......irrrrrrr__rrrrrri.........crrrrrrrrrc.........ii....iirrrrrrrrcc.........i
+ mm.mmm.........m.........irrrrrrrrrrrrrm.........m....m..m.........m.........m..
+ 
