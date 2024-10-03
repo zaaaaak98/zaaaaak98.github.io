@@ -16,30 +16,20 @@
       height: 100vh;
       background-color: #f0f0f0;
     }
-    .tabs {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .tab {
+    .toggle-btn {
       padding: 10px 20px;
       cursor: pointer;
-      background-color: #ddd;
-      margin-right: 5px;
-      border-radius: 5px;
-    }
-    .tab.active {
       background-color: #4CAF50;
       color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 16px;
     }
     .content {
-      display: none;
       margin-top: 20px;
       width: 90%;
       max-width: 600px;
-    }
-    .content.active {
-      display: block;
     }
     table {
       width: 100%;
@@ -58,14 +48,9 @@
 </head>
 <body>
 
-  <h1>Exercise Routines</h1>
+  <h1 id="routine-title">Wrist Warm-Up Routine</h1>
 
-  <div class="tabs">
-    <div class="tab active" id="tab1">Wrist Warm-Up Routine</div>
-    <div class="tab" id="tab2">Lower Back Strength Routine</div>
-  </div>
-
-  <div class="content active" id="content1">
+  <div class="content" id="content1">
     <table>
       <thead>
         <tr>
@@ -129,7 +114,7 @@
     </table>
   </div>
 
-  <div class="content" id="content2">
+  <div class="content" id="content2" style="display: none;">
     <table>
       <thead>
         <tr>
@@ -178,20 +163,24 @@
     </table>
   </div>
 
-  <script>
-    // Tab switching logic
-    document.getElementById("tab1").addEventListener("click", function() {
-      document.getElementById("content1").classList.add("active");
-      document.getElementById("content2").classList.remove("active");
-      document.getElementById("tab1").classList.add("active");
-      document.getElementById("tab2").classList.remove("active");
-    });
+  <button class="toggle-btn" id="toggle-btn">Switch to Lower Back Strength Routine</button>
 
-    document.getElementById("tab2").addEventListener("click", function() {
-      document.getElementById("content1").classList.remove("active");
-      document.getElementById("content2").classList.add("active");
-      document.getElementById("tab1").classList.remove("active");
-      document.getElementById("tab2").classList.add("active");
+  <script>
+    // Toggle between the two tables
+    let isWristRoutine = true;
+    document.getElementById("toggle-btn").addEventListener("click", function() {
+      if (isWristRoutine) {
+        document.getElementById("content1").style.display = "none";
+        document.getElementById("content2").style.display = "block";
+        document.getElementById("routine-title").innerText = "Lower Back Strength Routine";
+        document.getElementById("toggle-btn").innerText = "Switch to Wrist Warm-Up Routine";
+      } else {
+        document.getElementById("content1").style.display = "block";
+        document.getElementById("content2").style.display = "none";
+        document.getElementById("routine-title").innerText = "Wrist Warm-Up Routine";
+        document.getElementById("toggle-btn").innerText = "Switch to Lower Back Strength Routine";
+      }
+      isWristRoutine = !isWristRoutine;
     });
   </script>
 
