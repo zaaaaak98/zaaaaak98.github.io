@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise Routines</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #ddd;
+      margin-right: 5px;
+      border-radius: 5px;
+    }
+    .tab.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .content {
+      display: none;
+      margin-top: 20px;
+      width: 90%;
+      max-width: 600px;
+    }
+    .content.active {
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Exercise Routines</h1>
+
+  <div class="tabs">
+    <div class="tab active" id="tab1">Wrist Warm-Up Routine</div>
+    <div class="tab" id="tab2">Lower Back Strength Routine</div>
+  </div>
+
+  <div class="content active" id="content1">
+    <table>
+      <thead>
+        <tr>
+          <th>Exercise</th>
+          <th>Description</th>
+          <th>Reps/Sets</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jumping Jacks/Light Jogging</td>
+          <td>General warm-up to increase blood flow and warm up the body.</td>
+          <td>1 minute (continuous)</td>
+        </tr>
+        <tr>
+          <td>Arm Circles</td>
+          <td>Loosens shoulders and arms, improving range of motion.</td>
+          <td>30 seconds forward, 30 seconds backward</td>
+        </tr>
+        <tr>
+          <td>Wrist Rotations</td>
+          <td>Gently rotates wrists in both directions to improve mobility.</td>
+          <td>15 seconds each direction</td>
+        </tr>
+        <tr>
+          <td>Wrist Flexor Stretch</td>
+          <td>Stretches the underside of the forearm to relieve tension in wrist flexors.</td>
+          <td>30 seconds per arm (1 set)</td>
+        </tr>
+        <tr>
+          <td>Wrist Extensor Stretch</td>
+          <td>Stretches the top side of the forearm to target wrist extensors.</td>
+          <td>30 seconds per arm (1 set)</td>
+        </tr>
+        <tr>
+          <td>Finger Tendon Glides</td>
+          <td>Mobilizes finger tendons by opening and closing fists.</td>
+          <td>10 reps (1 set)</td>
+        </tr>
+        <tr>
+          <td>Finger Flicks</td>
+          <td>Activates finger muscles by rapidly opening and closing hands.</td>
+          <td>20–30 seconds</td>
+        </tr>
+        <tr>
+          <td>Forearm Rotations (Supination/Pronation)</td>
+          <td>Strengthens forearm muscles by rotating palm up and down.</td>
+          <td>10–15 reps per arm (1 set)</td>
+        </tr>
+        <tr>
+          <td>Wall Shoulder Stretch</td>
+          <td>Stretches shoulders and chest to prepare for upper body activity.</td>
+          <td>30 seconds (1 set)</td>
+        </tr>
+        <tr>
+          <td>Light Dynamic Hang (optional)</td>
+          <td>Light hanging to activate grip and forearm muscles.</td>
+          <td>Hold 5–10 seconds (1 set)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="content" id="content2">
+    <table>
+      <thead>
+        <tr>
+          <th>Exercise</th>
+          <th>Description</th>
+          <th>Reps/Sets</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cat-Cow Stretch</td>
+          <td>Mobilizes the spine, improving flexibility and relieving tightness.</td>
+          <td>1 minute (continuous)</td>
+        </tr>
+        <tr>
+          <td>Bird-Dog</td>
+          <td>Strengthens the lower back and core by extending opposite arms and legs.</td>
+          <td>10 reps per side (1 set)</td>
+        </tr>
+        <tr>
+          <td>Glute Bridge</td>
+          <td>Strengthens glutes and lower back, promoting pelvic stability.</td>
+          <td>10–15 reps (1 set)</td>
+        </tr>
+        <tr>
+          <td>Plank</td>
+          <td>Full-body core stabilization to support the lower back.</td>
+          <td>Hold for 30–60 seconds (1 set)</td>
+        </tr>
+        <tr>
+          <td>Superman</td>
+          <td>Targets lower back muscles by lifting arms, chest, and legs off the floor simultaneously.</td>
+          <td>10 reps (1 set)</td>
+        </tr>
+        <tr>
+          <td>Child’s Pose</td>
+          <td>Gently stretches the lower back and hips, relieving tension.</td>
+          <td>Hold for 30–60 seconds</td>
+        </tr>
+        <tr>
+          <td>Pelvic Tilts</td>
+          <td>Activates the lower back and core, improving spinal flexibility.</td>
+          <td>10 reps (1 set)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Tab switching logic
+    document.getElementById("tab1").addEventListener("click", function() {
+      document.getElementById("content1").classList.add("active");
+      document.getElementById("content2").classList.remove("active");
+      document.getElementById("tab1").classList.add("active");
+      document.getElementById("tab2").classList.remove("active");
+    });
+
+    document.getElementById("tab2").addEventListener("click", function() {
+      document.getElementById("content1").classList.remove("active");
+      document.getElementById("content2").classList.add("active");
+      document.getElementById("tab1").classList.remove("active");
+      document.getElementById("tab2").classList.add("active");
+    });
+  </script>
+
+</body>
+</html>
