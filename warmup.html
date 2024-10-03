@@ -44,6 +44,26 @@
     th {
       background-color: #f4f4f4;
     }
+    .timer {
+      display: none;
+      margin-top: 20px;
+    }
+    .timer h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .timer p {
+      font-size: 18px;
+    }
+    .timer-buttons {
+      margin-top: 10px;
+    }
+    .timer-buttons button {
+      padding: 10px;
+      margin-right: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
@@ -161,6 +181,17 @@
         </tr>
       </tbody>
     </table>
+    <button class="toggle-btn" id="start-timer-btn">Start Workout Timer</button>
+  </div>
+
+  <!-- Timer section -->
+  <div class="timer" id="timer">
+    <h2 id="exercise-name">Cat-Cow Stretch</h2>
+    <p>Time remaining: <span id="time-remaining">60</span> seconds</p>
+    <div class="timer-buttons">
+      <button id="pause-btn">Pause</button>
+      <button id="reset-btn">Reset</button>
+    </div>
   </div>
 
   <button class="toggle-btn" id="toggle-btn">Switch to Lower Back Strength Routine</button>
@@ -179,10 +210,21 @@
         document.getElementById("content2").style.display = "none";
         document.getElementById("routine-title").innerText = "Wrist Warm-Up Routine";
         document.getElementById("toggle-btn").innerText = "Switch to Lower Back Strength Routine";
+        document.getElementById("timer").style.display = "none"; // Hide timer if switching
       }
       isWristRoutine = !isWristRoutine;
     });
-  </script>
 
-</body>
-</html>
+    // Timer logic
+    const exercises = [
+      { name: "Cat-Cow Stretch", time: 60 },
+      { name: "Bird-Dog", time: 40 },
+      { name: "Glute Bridge", time: 45 },
+      { name: "Plank", time: 60 },
+      { name: "Superman", time: 30 },
+      { name: "Child’s Pose", time: 60 },
+      { name: "Pelvic Tilts", time: 45 }
+    ];
+
+    let currentExercise = 0;
+    let timeRemaining = exercises[0].time;
