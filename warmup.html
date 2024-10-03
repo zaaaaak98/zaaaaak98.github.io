@@ -228,3 +228,58 @@
 
     let currentExercise = 0;
     let timeRemaining = exercises[0].time;
+    let timerInterval = null;
+    let isPaused = false;
+
+    const timerDisplay = document.getElementById("timer");
+    const exerciseName = document.getElementById("exercise-name");
+    const timeDisplay = document.getElementById("time-remaining");
+
+    document.getElementById("start-timer-btn").addEventListener("click", function() {
+      timerDisplay.style.display = "block";
+      startTimer();
+    });
+
+    document.getElementById("pause-btn").addEventListener("click", function() {
+      if (isPaused) {
+        startTimer();
+        isPaused = false;
+      } else {
+        clearInterval(timerInterval);
+        isPaused = true;
+      }
+    });
+
+    document.getElementById("reset-btn").addEventListener("click", function() {
+      clearInterval(timerInterval);
+      currentExercise = 0;
+      timeRemaining = exercises[0].time;
+      exerciseName.innerText = exercises[0].name;
+      timeDisplay.innerText = timeRemaining;
+      isPaused = false;
+      timerDisplay.style.display = "none";
+    });
+
+    function startTimer() {
+      timerInterval = setInterval(function() {
+        if (timeRemaining > 0) {
+          timeRemaining--;
+          timeDisplay.innerText = timeRemaining;
+        } else {
+          // Move to the next exercise
+          currentExercise++;
+          if (currentExercise < exercises.length) {
+            exerciseName.innerText = exercises[currentExercise].name;
+            timeRemaining = exercises[currentExercise].time;
+            timeDisplay.innerText = timeRemaining;
+          } else {
+            clearInterval(timerInterval);
+            alert("Workout complete!");
+          }
+        }
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
