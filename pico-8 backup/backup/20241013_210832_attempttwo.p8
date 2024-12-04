@@ -7,7 +7,7 @@ function _init()
  y=5   -- player y position
  izaak=1  -- sprite for the main character Izaak
  annie=3  -- sprite for the character Annie
- w,a =5, 30   -- used to control animation speed
+ w,a =5, 15   -- used to control animation speed
  mx = 1 -- map selection flag
  scene = 0 -- keeps track of game scene state
 end
@@ -150,11 +150,6 @@ function draw_scene_one()
    anniemovement("back") -- draw Annie's sprite
    spr(annieback,100, 35)
    if x==82 then
-    if annieback==65 then
-      annie=4
-    else 
-      annie=3
-    end
     scene_two_dialogue() -- Dialogue for scene two
     x=32
    end
@@ -213,12 +208,10 @@ function anniemovement(facing)
   if facing=="back" then
    a=a-1
    annieback=64
-   if a>15 then
+   if a<0 then
     annieback+=1
     if annieback > 65 then annieback = 64 end -- Loop between two sprites
-   elseif a<15 then
-    if annieback < 65 then annieback = 64 end
-    a = 30 -- Reset animation counter
+    a = 15 -- Reset animation counter
    end
   end
 end
@@ -391,7 +384,7 @@ function scene_two_dialogue()
  speak("hey annie, can you do me", 1)
  speak("a favour?", 2)
  sleep(2)
- spr(annie,100,35)
+ spr(3,100,35)
  remove_speaker()
  speaker("annie")
  speak("yep?",1)
@@ -420,10 +413,7 @@ end
 
 -- Dialogue for scene three
 function scene_three_dialogue()
- for i=x, 80 do
-  i+=1
- end 
-
+ speak("scene three.", 1)
 end
 
 -- Display dialogue text letter by letter

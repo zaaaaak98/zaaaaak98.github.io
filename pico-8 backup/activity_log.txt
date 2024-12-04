@@ -251,4 +251,30 @@
 2024-09-29 22:38:04 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/test.p8.png
  i..ii
 2024-09-29 22:38:19 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8
- 
+ iriiiiiii...ii.........ii.........i.........ii.........i
+2024-10-01 23:37:13 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiii
+2024-10-01 23:37:25 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8
+ rrrrrrrrrrrrrrrrrrrrrrrrrrrrcgssstc
+2024-10-06 21:23:07 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ i.........i..ii
+2024-10-06 21:23:54 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8
+ iiirrrrrrrrrr_________rrc.........mgggggggggg..gggggggg.........g.........iigirg
+ gggggggggirrrrrrrr__rrr_________i....grrrrrrrrrr_________
+2024-10-12 10:19:28 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iii
+2024-10-12 10:19:37 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8
+ irrrrrrrrrr_________rrrc.........c.........c.cmmmmmm.........mgg.........gcccc..
+ .c.........irrrrrrrrrrc..cii.....rrrrrrrrrii.......irrrrrrrric.........rrrrrrrrr
+ ri.....ii.........crrrrrrrrrri.ii.iirrrrrrrrrrrrri.........iirrrrrrrrr_r________
+ _rrrrrrrr_________rrrr_________rrr_____rrr
+2024-10-13 20:27:56 C:/Users/Izaak/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iiiii
+2024-10-13 20:28:11 C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8
+ ii.........i.....i.........iirrrrrrrrrrrrrirrrrrrrrrrrrrrrriicr_________rrrrrrrr
+ rrrrrrrrrrr_________rii.........rrrrrrrrrrri.........irrrrrrrrrr________ri.....i
+ irrrrrrrrrrrrrrrrrrrrrrrrr_________rrrrrrrrrrr_________irrrrrrrr_r________rrrrrr
+ rrrr_r_________rr__irrrrrrrrr_r__r___rrrrrrrrirrrrrrrr___rrrr_rrr___rrrrrrrrrrrr
+ _i.........gggg.........ii.i.........iii.........irrrrrrrr___rrrr_r_irrrrrrrrrr_
+ ________rr_________rrrrrrrrrrriirrrrrrrrrr_________rrgg.........g...g.........ri
+ .........girrrrrrrrrirrrrrrrrrr_________r___rri.........i

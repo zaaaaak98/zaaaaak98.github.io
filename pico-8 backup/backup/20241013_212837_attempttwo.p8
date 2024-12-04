@@ -422,6 +422,7 @@ end
 function scene_three_dialogue()
  for i=x, 80 do
   i+=1
+  spr(3, i, 40)
  end 
 
 end

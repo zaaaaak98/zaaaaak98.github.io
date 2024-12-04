@@ -1,138 +1,122 @@
 [000000] codo_init
 [000000]   platform: Windows
-[000008]   Found config.txt
-[000008]   
-[000008]     01 window_size 0 0 // window width, height
-[000008]     02 screen_size 0 0 // screen width, height (stretched to window) 
-[000008]     03 show_fps 0 // Draw frames per second in the corner
-[000008]     04 windowed 1 // 1 to start up in windowed mode
-[000008]     05 window_position -1 -1 // x and y position of window (-1, -1 to let the window manager decide)
-[000008]     new window position: -1, -1
-[000008]     06 frameless 0 // 1 to use a window with no frame
-[000008]     07 fullscreen_method 1 // 0 maximized window (linux)  1 borderless desktop-sized window  2 hardware fullscreen (warning: erratic behaviour under some drivers)
-[000008]     08 blit_method 0  // 0 auto  1 software (slower but sometimes more reliable)  2 hardware (can do filtered scaling) 
-[000008]     09 foreground_sleep_ms 2 // number of milliseconds to sleep each frame. Try 10 to conserve battery power
-[000008]     10 background_sleep_ms 10 // number of milliseconds to sleep each frame when running in the background
-[000008]     11 sessions 20 // number of times program has been run
-[000008]     12 rmb_key 0 // 0 for none  226 for LALT
-[000008]     13 desktop_path 
-[000008]     14 read_controllers_in_background 0
-[000008]     15 sound_volume 256 // 0..256
-[000008]     16 music_volume 256 // 0..256
-[000008]     17 mix_buffer_size 1024
-[000008]     18 map_scancodes 
-[000008]     19 use_wget 0 // (Linux) 1 to use wget for downloads instead of libcurl (must be installed)
-[000008]     20 version 0.2.6b
-[000008]     21 volume 256
-[000008]     22 root_path C:/Users/Izaak/AppData/Roaming/pico-8/carts/
-[000008]     23 cdata_path C:/Users/Izaak/AppData/Roaming/pico-8/cdata/
-[000008]     24 joystick_index 0
-[000008]     25 merge_joysticks 0
-[000008]     26 button_keys 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-[000008]     27 live_notes 0
-[000008]     28 cursor_snap 0
-[000008]     29 gui_theme 0
-[000008]     30 screenshot_scale 3
-[000008]     31 gif_scale 3
-[000008]     32 gif_len 16
-[000008]     33 gif_reset_mode 0
-[000008]     34 host_framerate_control 1
-[000008]     35 splore_filter 0
-[000008]     36 tab_width 1
-[000008]     37 draw_tabs 0
-[000008]     38 record_activity_log 1
-[000008]     39 allow_function_keys 1
-[000008]     40 check_for_cart_updates 1
-[000008]     41 auto_hide_mouse_cursor 5
-[000008]     42 aggressive_backups 0
-[000008]     43 periodic_backups 20
-[000008]     44 transform_screen 0
-[000008]     45 gfx_grid_lines 0
-[000008]     46 capture_timestamps 0
-[000008]   
-[000009]   codo_system_init
-[000514]   Compiled against SDL version: 2.0.2
-[000514]   Linked against SDL version:   2.0.9
-[000514]   Current video driver: windows
-[000514]   codo_reset_timer
-[000514]   codo_gui_init
-[000514]   codo_keys_init
-[000514]   codo_text_init
-[000515]   codo_video_init
-[000515]   codo_mouse_init
-[000515]   codo_joystick_init
-[000522]   Reading controller mappings: C:/Users/Izaak/AppData/Roaming/pico-8/sdl_controllers.txt
-[000522]   searching for joysticks
-[000522]     found 0 joysticks
-[000522]   ok
-[000522] ok
-[000532] codo_load_pod: C:/Program Files (x86)/PICO-8/pico8.dat ok 
-[000534] codo_set_screen 128 128 8 100
-[000534]  window size: 640 540
-[000636]   setting filter to nearest (screen_mode 0  back page width: 128)
+[000015]   Found config.txt
+[000015]   
+[000015]     01 window_size 0 0 // window width, height
+[000015]     02 screen_size 0 0 // screen width, height (stretched to window) 
+[000015]     03 show_fps 0 // Draw frames per second in the corner
+[000015]     04 windowed 1 // 1 to start up in windowed mode
+[000015]     05 window_position -1 -1 // x and y position of window (-1, -1 to let the window manager decide)
+[000015]     new window position: -1, -1
+[000015]     06 frameless 0 // 1 to use a window with no frame
+[000015]     07 fullscreen_method 1 // 0 maximized window (linux)  1 borderless desktop-sized window  2 hardware fullscreen (warning: erratic behaviour under some drivers)
+[000015]     08 blit_method 0  // 0 auto  1 software (slower but sometimes more reliable)  2 hardware (can do filtered scaling) 
+[000015]     09 foreground_sleep_ms 2 // number of milliseconds to sleep each frame. Try 10 to conserve battery power
+[000015]     10 background_sleep_ms 10 // number of milliseconds to sleep each frame when running in the background
+[000015]     11 sessions 24 // number of times program has been run
+[000015]     12 rmb_key 0 // 0 for none  226 for LALT
+[000015]     13 desktop_path 
+[000015]     14 read_controllers_in_background 0
+[000015]     15 sound_volume 256 // 0..256
+[000015]     16 music_volume 256 // 0..256
+[000015]     17 mix_buffer_size 1024
+[000015]     18 map_scancodes 
+[000015]     19 use_wget 0 // (Linux) 1 to use wget for downloads instead of libcurl (must be installed)
+[000015]     20 version 0.2.6b
+[000015]     21 volume 256
+[000015]     22 root_path C:/Users/Izaak/AppData/Roaming/pico-8/carts/
+[000015]     23 cdata_path C:/Users/Izaak/AppData/Roaming/pico-8/cdata/
+[000015]     24 joystick_index 0
+[000015]     25 merge_joysticks 0
+[000015]     26 button_keys 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[000015]     27 live_notes 0
+[000015]     28 cursor_snap 0
+[000015]     29 gui_theme 0
+[000015]     30 screenshot_scale 3
+[000015]     31 gif_scale 3
+[000015]     32 gif_len 16
+[000015]     33 gif_reset_mode 0
+[000015]     34 host_framerate_control 1
+[000015]     35 splore_filter 0
+[000015]     36 tab_width 1
+[000015]     37 draw_tabs 0
+[000015]     38 record_activity_log 1
+[000015]     39 allow_function_keys 1
+[000015]     40 check_for_cart_updates 1
+[000015]     41 auto_hide_mouse_cursor 5
+[000015]     42 aggressive_backups 0
+[000015]     43 periodic_backups 20
+[000015]     44 transform_screen 0
+[000015]     45 gfx_grid_lines 0
+[000015]     46 capture_timestamps 0
+[000015]   
+[000015]   codo_system_init
+[000643]   Compiled against SDL version: 2.0.2
+[000643]   Linked against SDL version:   2.0.9
+[000643]   Current video driver: windows
+[000643]   codo_reset_timer
+[000643]   codo_gui_init
+[000643]   codo_keys_init
+[000643]   codo_text_init
+[000643]   codo_video_init
+[000643]   codo_mouse_init
+[000643]   codo_joystick_init
+[000651]   Reading controller mappings: C:/Users/Izaak/AppData/Roaming/pico-8/sdl_controllers.txt
+[000652]   searching for joysticks
+[000652]     found 0 joysticks
+[000652]   ok
+[000652] ok
+[000667] codo_load_pod: C:/Program Files (x86)/PICO-8/pico8.dat ok 
+[000673] codo_set_screen 128 128 8 100
+[000673]  window size: 640 540
+[000843]   setting filter to nearest (screen_mode 0  back page width: 128)
   renderer direct3d:
    flags: 0x0000000E ( |  | )
    texture formats (3): ARGB8888, YV12, IYUV
    max texture size: 8192x8192
-[000638]  desktop size: 1920 1280
-[000638] ok
-[000656] codo_sound_init mix_buffer_size: 1024
-[000656] codo_sound_init
-[000656] SDL_INIT_AUDIO ok
-[000678] SDL_OpenAudio ok
-[000678]  freq:22050
+[000845]  desktop size: 1920 1280
+[000845] ok
+[000867] codo_sound_init mix_buffer_size: 1024
+[000867] codo_sound_init
+[000867] SDL_INIT_AUDIO ok
+[000895] SDL_OpenAudio ok
+[000895]  freq:22050
  channels:1
-[000678] Built-in audio drivers: 0 wasapi 1 directsound 2 winmm 3 disk 4 dummy
-[000678] Current audio driver: wasapi
-[002690] splore_init
-[002690] could not load favourites file: C:/Users/Izaak/AppData/Roaming/pico-8/favourites.txt
-[4212520] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: [300426] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[332868] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[375797] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attemptone.p8 running_filename: present/attemptone.p8 running_cart_lid: 
-[858182] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[923785] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[962439] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[1002131] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[1093894] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[1255164] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[1416254] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[1661967] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[1670050] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[1719457] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[1834145] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[1935589] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[2017005] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[2033459] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[2053064] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[2074730] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[2119386] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[2169173] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[2214368] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[2897547] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[2942517] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3192750] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3251432] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3317476] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3410396] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3484874] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3553040] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3716116] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3890435] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3994674] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4067583] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4208423] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4330585] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4448239] exporting html: test.html 1 1
-[4546234] codo_save_png result: 0  file: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/test.png
-[4655876] codo_save_png result: 0  file: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/test.p8.png
-[4675607] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4682363] codo_save_png result: 0  file: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/test.png
-[4687311] codo_save_png result: 0  file: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/test.png
-[4694519] exporting html: test.html 1 1
-[4694523] 1. export html
-[4694523] 1.a opening output: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/test.html
-[4694524] 1.b replacements
-[4694524]  ok_
-[4694531] codo_save_png result: 0  file: C:/Users/Izaak/AppData/Roaming/pico-8/_label.png
-[4694536]  ok_
-[4694537] 2. writing C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/test.js
+[000895] Built-in audio drivers: 0 wasapi 1 directsound 2 winmm 3 disk 4 dummy
+[000895] Current audio driver: wasapi
+[002916] splore_init
+[002917] could not load favourites file: C:/Users/Izaak/AppData/Roaming/pico-8/favourites.txt
+[1139981] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[1182536] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[1239861] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[1704772] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[1883532] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[2004415] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[2086046] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[2132500] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[2196431] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[2440496] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[2498932] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[2601821] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[2643312] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[2681883] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[2751061] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[3053975] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[3150519] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[3206531] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[3616811] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[3651594] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[4185176] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[4187716] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[4219118] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[4385951] window closed (14)
+[4385953] codo_exit
+[4385953]   cmusic_stop
+[4385953]   codo_main_exit
+[4385954]   codo_config_save
+[4385955]   codo_sound_exit
+[4385955]   codo_video_exit
+[4385968]   codo_joystick_exit
+[4385968]   codo_system_exit
+[4385969]   codo_items_created: 1369
+[4385969] ok

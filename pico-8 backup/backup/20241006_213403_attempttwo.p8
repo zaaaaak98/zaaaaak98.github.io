@@ -7,7 +7,7 @@ function _init()
  y=5   -- player y position
  izaak=1  -- sprite for the main character Izaak
  annie=3  -- sprite for the character Annie
- w,a =5, 30   -- used to control animation speed
+ w=5   -- used to control animation speed
  mx = 1 -- map selection flag
  scene = 0 -- keeps track of game scene state
 end
@@ -136,32 +136,22 @@ end
 function draw_scene_one()
  showmap(3) -- draw part of the map
  spr(1, x, 40) -- draw Izaak's sprite
+ spr(3, 100, 40) -- draw Annie's sprite
  -- Draw based on scene state
  cutscene = true
  if scene==1 then
-  spr(3, 100, 40) -- draw Annie's sprite
   print("welcome the new girl",8,80)
   if x==82 then
    scene_one_dialogue() -- Dialogue for scene one
    x=15
-  end
-  elseif scene==2 then
-   print("speak to annie", 8, 80)
-   anniemovement("back") -- draw Annie's sprite
-   spr(annieback,100, 35)
-   if x==82 then
-    if annieback==65 then
-      annie=4
-    else 
-      annie=3
-    end
-    scene_two_dialogue() -- Dialogue for scene two
-    x=32
-   end
+  elseif scene==2 and x==82 then
+   scene_two_dialogue() -- Dialogue for scene two
+   x=32
   elseif scene==3 and x==82 then
    x=48 
    scene_three_dialogue() -- Dialogue for scene three
   end
+ end
  if cutscene == false then  
   y=30 -- Adjust y position
   _draw = draw_game_map_one -- Set drawing function back to game map
@@ -209,19 +199,6 @@ function playermovement()
  
 end
 
-function anniemovement(facing)
-  if facing=="back" then
-   a=a-1
-   annieback=64
-   if a>15 then
-    annieback+=1
-    if annieback > 65 then annieback = 64 end -- Loop between two sprites
-   elseif a<15 then
-    if annieback < 65 then annieback = 64 end
-    a = 30 -- Reset animation counter
-   end
-  end
-end
 -- Print player's coordinates (used for debugging)
 function printcoords()
  print(x, 7)
@@ -334,50 +311,40 @@ end
 function scene_one_dialogue()
  if cutscene then
   remove_speaker()
-  speaker("izaak") -- Show Izaak speaking
+  speaker(1) -- Show Izaak speaking
   speak("hey, how's it going?", 1)
   speak("my name is izaak.", 2)
   speak("what's your name?", 3)
   sleep(3) -- Wait 3 seconds
   remove_speaker() -- Clear dialogue box
-  speaker("new girl") -- Show Annie speaking
+  speaker(3) -- Show Annie speaking
   speak("hi, i'm annie.", 1)
-  sleep(3)
+  sleep(3) -- Wait 3 seconds
   remove_speaker()
-  speaker("izaak")
+  speaker(1)
   speak("nice to meet you!",1)
   speak("have you only just started",2)
   speak("here?",3)
   sleep(3)
   remove_speaker()
-  speaker("annie")
+  speaker(2)
   speak("yeah, i've not been here",1)
   speak("very long.", 2)
   sleep(2)
   remove_speaker()
-  speaker("izaak")
+  speaker(1)
   speak("yeah, me too", 1)
   speak("i've been here for about", 2)
   speak("a month maybe?",3)
   sleep(2)
   remove_speaker()
-  speaker("izaak")
+  speaker(1)
   speak("how are you finding it ",1)
   speak("so far?", 2)
   sleep(2)
   remove_speaker()
-  speaker("annie")
+  speaker(2)
   speak("it's okay.",1)
-  sleep(2)
-  remove_speaker()
-  speaker("izaak")
-  speak("right, well i'd better",1)
-  speak("get back to it. emma", 2)
-  speak("will moan at me if i don't.", 3)
-  sleep(3)
-  remove_speaker()
-  speaker("izaak")
-  speak("catch you later annie", 1)
   sleep(2)
   remove_speaker()
   cutscene = false -- End cutscene
@@ -386,44 +353,12 @@ end
 
 -- Dialogue for scene two
 function scene_two_dialogue()
- remove_speaker()
- speaker("izaak")
- speak("hey annie, can you do me", 1)
- speak("a favour?", 2)
- sleep(2)
- spr(annie,100,35)
- remove_speaker()
- speaker("annie")
- speak("yep?",1)
- sleep(2)
- remove_speaker()
- speaker("izaak")
- speak("would you be able to close", 1)
- speak("my section for me? i just", 2)
- speak("need to do something.", 3)
- sleep(3)
- remove_speaker()
- speaker("izaak")
- speak("i'll owe you a mcdonalds?", 1)
- sleep(2)
- remove_speaker()
- speaker("annie")
- speak("yeah of course.", 1)
- sleep(2)
- remove_speaker()
- speaker("izaak")
- speak("thank you so much!", 1)
- speak("i'll try and be quick.", 2)
- sleep(2)
- cutscene=false
+ speak("scene two.", 1)
 end
 
 -- Dialogue for scene three
 function scene_three_dialogue()
- for i=x, 80 do
-  i+=1
- end 
-
+ speak("scene three.", 1)
 end
 
 -- Display dialogue text letter by letter
@@ -439,7 +374,13 @@ end
 
 -- Display speaker name
 function speaker(person)
- print(person, 8, 68, 7)
+ if person == 1 then
+  print("izaak", 8, 68, 7)
+ elseif person == 2 then
+  print("annie", 8, 68, 7)
+ elseif person == 3 then
+  print("new girl", 8, 68, 7) 
+end
  sleep(0.5) -- Pause to show name
 end
 

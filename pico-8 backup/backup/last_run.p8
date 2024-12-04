@@ -7,7 +7,7 @@ function _init()
  y=5   -- player y position
  izaak=1  -- sprite for the main character Izaak
  annie=3  -- sprite for the character Annie
- w=5   -- used to control animation speed
+ w,a =5, 30   -- used to control animation speed
  mx = 1 -- map selection flag
  scene = 0 -- keeps track of game scene state
 end
@@ -136,22 +136,35 @@ end
 function draw_scene_one()
  showmap(3) -- draw part of the map
  spr(1, x, 40) -- draw Izaak's sprite
- spr(3, 100, 40) -- draw Annie's sprite
  -- Draw based on scene state
  cutscene = true
  if scene==1 then
+  spr(3, 100, 40) -- draw Annie's sprite
   print("welcome the new girl",8,80)
   if x==82 then
+    x=82
    scene_one_dialogue() -- Dialogue for scene one
    x=15
-  elseif scene==2 and x==82 then
-   scene_two_dialogue() -- Dialogue for scene two
-   x=32
-  elseif scene==3 and x==82 then
-   x=48 
-   scene_three_dialogue() -- Dialogue for scene three
   end
- end
+  elseif scene==2 then
+   print("speak to annie", 8, 80)
+   anniemovement("back") -- draw Annie's sprite
+   spr(annieback,100, 35)
+   if x==82 then
+    x=82
+    if annieback==65 then
+      annie=4
+    else 
+      annie=3
+    end
+    scene_two_dialogue() -- Dialogue for scene two
+    x=32
+   end
+  elseif scene==3 then
+  x=82
+  scene_three_dialogue() -- Dialogue for scene three
+   x=48 
+  end
  if cutscene == false then  
   y=30 -- Adjust y position
   _draw = draw_game_map_one -- Set drawing function back to game map
@@ -199,6 +212,19 @@ function playermovement()
  
 end
 
+function anniemovement(facing)
+  if facing=="back" then
+   a=a-1
+   annieback=64
+   if a>15 then
+    annieback+=1
+    if annieback > 65 then annieback = 64 end -- Loop between two sprites
+   elseif a<15 then
+    if annieback < 65 then annieback = 64 end
+    a = 30 -- Reset animation counter
+   end
+  end
+end
 -- Print player's coordinates (used for debugging)
 function printcoords()
  print(x, 7)
@@ -311,40 +337,50 @@ end
 function scene_one_dialogue()
  if cutscene then
   remove_speaker()
-  speaker(1) -- Show Izaak speaking
+  speaker("izaak") -- Show Izaak speaking
   speak("hey, how's it going?", 1)
   speak("my name is izaak.", 2)
   speak("what's your name?", 3)
   sleep(3) -- Wait 3 seconds
   remove_speaker() -- Clear dialogue box
-  speaker(3) -- Show Annie speaking
+  speaker("new girl") -- Show Annie speaking
   speak("hi, i'm annie.", 1)
-  sleep(3) -- Wait 3 seconds
+  sleep(3)
   remove_speaker()
-  speaker(1)
+  speaker("izaak")
   speak("nice to meet you!",1)
   speak("have you only just started",2)
   speak("here?",3)
   sleep(3)
   remove_speaker()
-  speaker(2)
+  speaker("annie")
   speak("yeah, i've not been here",1)
   speak("very long.", 2)
   sleep(2)
   remove_speaker()
-  speaker(1)
+  speaker("izaak")
   speak("yeah, me too", 1)
   speak("i've been here for about", 2)
   speak("a month maybe?",3)
   sleep(2)
   remove_speaker()
-  speaker(1)
+  speaker("izaak")
   speak("how are you finding it ",1)
   speak("so far?", 2)
   sleep(2)
   remove_speaker()
-  speaker(2)
+  speaker("annie")
   speak("it's okay.",1)
+  sleep(2)
+  remove_speaker()
+  speaker("izaak")
+  speak("right, well i'd better",1)
+  speak("get back to it. emma", 2)
+  speak("will moan at me if i don't.", 3)
+  sleep(3)
+  remove_speaker()
+  speaker("izaak")
+  speak("catch you later annie", 1)
   sleep(2)
   remove_speaker()
   cutscene = false -- End cutscene
@@ -353,12 +389,45 @@ end
 
 -- Dialogue for scene two
 function scene_two_dialogue()
- speak("scene two.", 1)
+ remove_speaker()
+ speaker("izaak")
+ speak("hey annie, can you do me", 1)
+ speak("a favour?", 2)
+ sleep(2)
+ spr(annie,100,35)
+ remove_speaker()
+ speaker("annie")
+ speak("yep?",1)
+ sleep(2)
+ remove_speaker()
+ speaker("izaak")
+ speak("would you be able to close", 1)
+ speak("my section for me? i just", 2)
+ speak("need to do something.", 3)
+ sleep(3)
+ remove_speaker()
+ speaker("izaak")
+ speak("i'll owe you a mcdonalds?", 1)
+ sleep(2)
+ remove_speaker()
+ speaker("annie")
+ speak("yeah of course.", 1)
+ sleep(2)
+ remove_speaker()
+ speaker("izaak")
+ speak("thank you so much!", 1)
+ speak("i'll try and be quick.", 2)
+ sleep(2)
+ cutscene=false
 end
 
 -- Dialogue for scene three
 function scene_three_dialogue()
- speak("scene three.", 1)
+ for i=x, 80 do
+  i+=1
+  spr(3, i, 40)
+ end 
+
 end
 
 -- Display dialogue text letter by letter
@@ -374,13 +443,7 @@ end
 
 -- Display speaker name
 function speaker(person)
- if person == 1 then
-  print("izaak", 8, 68, 7)
- elseif person == 2 then
-  print("annie", 8, 68, 7)
- elseif person == 3 then
-  print("new girl", 8, 68, 7) 
-end
+ print(person, 8, 68, 7)
  sleep(0.5) -- Pause to show name
 end
 
@@ -422,14 +485,16 @@ __gfx__
 444114444444224444444444d550550555555055530303055e0e0e05590909057000000000000007700000000000000700000000000000007000000000000007
 4411114444422224444444445000005000000500530303055e0e0e05590909057000000000000007700000000000000700000000000000007000000000000007
 41411414442422424444444400000000000000000000000000000000000000007000000000000007777777777777777700000000777777777000000000000007
-00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-00888800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-00888800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-00888800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-00888800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00555500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00555500005555000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00555500005555000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00555500005555000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+02555520005555000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00555500025555200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+000cc000005555000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+000cc000000cc0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 __gff__
-0100000000000000000000000000000001000000000000010101010000000000010101010101010101000000000000000000000000000000000000000000000000010101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0100000000000000000000000000000001000000000000010101010000000000010101010101010101000000000000000000000000000000000000000000000000000101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 __map__
 101010101010101010101010101010101010101010101010101a191010101010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
