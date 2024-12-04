@@ -127,6 +127,7 @@ function update_scene_two()
 end
 
 function update_scene_three()
+  playermovement()
  if btnp(❎) then
   mapone() -- Go back to map one
  end
@@ -158,9 +159,12 @@ function draw_scene_one()
     scene_two_dialogue() -- Dialogue for scene two
     x=32
    end
-  elseif scene==3 and x==82 then
-   x=48 
-   scene_three_dialogue() -- Dialogue for scene three
+  elseif scene==3 then
+   spr(annie, 100, 40) 
+   if x==82 then
+    scene_three_dialogue() -- Dialogue for scene three
+   end
+   x=48
   end
  if cutscene == false then  
   y=30 -- Adjust y position
@@ -420,11 +424,24 @@ end
 
 -- Dialogue for scene three
 function scene_three_dialogue()
- for i=x, 80 do
-  i+=1
- end 
+ remove_speaker()
+ speaker("izaak")
+ speak("hey, you ready for that", 1)
+ speak("mcdonalds?", 2)
+ sleep(3)
+ remove_speaker()
+ speaker("annie")
+ speak("yep. just let me get my", 1)
+ speak("bag from the back.", 2)
+ sleep(2)
+ remove_speaker()
+ speaker("izaak")
+ speak("no problem, i'll wait", 1)
+ speak("here", 2)
+ sleep(2)
+ cutscene=false
 
-end
+ end 
 
 -- Display dialogue text letter by letter
 function speak(words,lines)
