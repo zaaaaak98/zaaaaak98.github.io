@@ -95,3 +95,12 @@
 [090507] codo_save_png result: 0  file: C:/Users/Izaak/AppData/Roaming/pico-8/_label.png
 [090513]  ok_
 [090513] 2. writing C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/test.js
+[214472] run_cart current_filename: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[324978] exporting html: test.html 1 1
+[324987] 1. export html
+[324987] 1.a opening output: C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/test.html
+[324987] 1.b replacements
+[324989]  ok_
+[325011] codo_save_png result: 0  file: C:/Users/Izaak/AppData/Roaming/pico-8/_label.png
+[325015]  ok_
+[325015] 2. writing C:/Users/Izaak/AppData/Roaming/pico-8/carts/present/test.js
