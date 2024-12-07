@@ -51,113 +51,47 @@
 [000009]     46 capture_timestamps 0
 [000009]   
 [000009]   codo_system_init
-[000468]   Compiled against SDL version: 2.0.2
-[000468]   Linked against SDL version:   2.0.9
-[000468]   Current video driver: windows
-[000468]   codo_reset_timer
-[000468]   codo_gui_init
-[000468]   codo_keys_init
-[000468]   codo_text_init
-[000468]   codo_video_init
-[000468]   codo_mouse_init
-[000468]   codo_joystick_init
-[000476]   Reading controller mappings: C:/Users/zakad/AppData/Roaming/pico-8/sdl_controllers.txt
-[000476]   searching for joysticks
-[000476]     found 0 joysticks
-[000476]   ok
-[000476] ok
-[000488] codo_load_pod: C:/Program Files (x86)/PICO-8/pico8.dat ok 
-[000491] codo_set_screen 128 128 8 100
-[000491]  window size: 640 540
-[000661]   setting filter to nearest (screen_mode 0  back page width: 128)
+[000451]   Compiled against SDL version: 2.0.2
+[000451]   Linked against SDL version:   2.0.9
+[000451]   Current video driver: windows
+[000451]   codo_reset_timer
+[000451]   codo_gui_init
+[000451]   codo_keys_init
+[000451]   codo_text_init
+[000452]   codo_video_init
+[000452]   codo_mouse_init
+[000452]   codo_joystick_init
+[000453]   Reading controller mappings: C:/Users/zakad/AppData/Roaming/pico-8/sdl_controllers.txt
+[000453]   searching for joysticks
+[000453]     found 0 joysticks
+[000453]   ok
+[000453] ok
+[000464] codo_load_pod: C:/Program Files (x86)/PICO-8/pico8.dat ok 
+[000466] codo_set_screen 128 128 8 100
+[000466]  window size: 640 540
+[000607]   setting filter to nearest (screen_mode 0  back page width: 128)
   renderer direct3d:
    flags: 0x0000000E ( |  | )
    texture formats (3): ARGB8888, YV12, IYUV
    max texture size: 16384x16384
-[000662]  desktop size: 1920 1080
-[000662] ok
-[000670] codo_sound_init mix_buffer_size: 1024
-[000670] codo_sound_init
-[000670] SDL_INIT_AUDIO ok
-[000701] SDL_OpenAudio ok
-[000701]  freq:22050
+[000608]  desktop size: 1920 1080
+[000608] ok
+[000616] codo_sound_init mix_buffer_size: 1024
+[000616] codo_sound_init
+[000616] SDL_INIT_AUDIO ok
+[000642] SDL_OpenAudio ok
+[000642]  freq:22050
  channels:1
-[000701] Built-in audio drivers: 0 wasapi 1 directsound 2 winmm 3 disk 4 dummy
-[000701] Current audio driver: wasapi
-[002711] splore_init
-[002711] could not load favourites file: C:/Users/zakad/AppData/Roaming/pico-8/favourites.txt
-[025620] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[116765] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[264692] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[324505] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[389860] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[445996] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[646319] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[795212] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[895040] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[960938] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[1099493] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[1197365] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[1330642] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[1422630] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[2499494] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3638418] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3709193] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3741939] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3753694] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[3755464] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4088379] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4230532] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4493372] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4567882] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4632745] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4734308] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4737148] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4803710] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4880751] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[4933358] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[5048391] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[5084003] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[5168318] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[5208894] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[5396832] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[5452105] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[6509587] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[7343909] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[7460805] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[7610275] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[7789872] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[8171364] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[8288265] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[8364287] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[8823601] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[8861188] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[9049393] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[9186822] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[9433265] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[9585288] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[9667581] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[9764283] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[9809763] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[9947467] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[10007912] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[10473879] exporting html: attempttwo.html 1 1
-[10491957] codo_save_png result: 0  file: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.png
-[10493652] exporting html: attempttwo.html 1 1
-[10592413] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
-[10596082] exporting html: attempttwo.html 1 1
-[10596085] 1. export html
-[10596085] 1.a opening output: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.html
-[10596085] 1.b replacements
-[10596086]  ok_
-[10596094] codo_save_png result: 0  file: C:/Users/zakad/AppData/Roaming/pico-8/_label.png
-[10596098]  ok_
-[10596099] 2. writing C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.js
-[10631929] exporting html: attempttwo.html 1 1
-[10631933] 1. export html
-[10631933] 1.a opening output: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.html
-[10631933] 1.b replacements
-[10631933]  ok_
-[10631941] codo_save_png result: 0  file: C:/Users/zakad/AppData/Roaming/pico-8/_label.png
-[10631941]  ok_
-[10631941] 2. writing C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.js
+[000642] Built-in audio drivers: 0 wasapi 1 directsound 2 winmm 3 disk 4 dummy
+[000642] Current audio driver: wasapi
+[002650] splore_init
+[002650] could not load favourites file: C:/Users/zakad/AppData/Roaming/pico-8/favourites.txt
+[018488] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[028079] exporting html: test.html 1 1
+[028082] 1. export html
+[028082] 1.a opening output: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/test.html
+[028082] 1.b replacements
+[028083]  ok_
+[028090] codo_save_png result: 0  file: C:/Users/zakad/AppData/Roaming/pico-8/_label.png
+[028095]  ok_
+[028095] 2. writing C:/Users/zakad/AppData/Roaming/pico-8/carts/present/test.js
