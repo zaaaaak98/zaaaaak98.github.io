@@ -236,6 +236,18 @@ function draw_cutscene()
  end
 end
 
+function draw_easthampsteadpark()
+  if scene==5 then
+  elseif scene==6 then
+  end
+end
+
+function draw_cineworld()
+  if scene==7 then
+  elseif scene==8 then
+  end
+end
+
 -- Set initial update and draw functions for the game
 _update = update_menu
 _draw = draw_menu

@@ -141,3 +141,23 @@
 [9809763] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
 [9947467] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
 [10007912] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[10473879] exporting html: attempttwo.html 1 1
+[10491957] codo_save_png result: 0  file: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.png
+[10493652] exporting html: attempttwo.html 1 1
+[10592413] run_cart current_filename: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8 running_filename: present/attempttwo.p8 running_cart_lid: 
+[10596082] exporting html: attempttwo.html 1 1
+[10596085] 1. export html
+[10596085] 1.a opening output: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.html
+[10596085] 1.b replacements
+[10596086]  ok_
+[10596094] codo_save_png result: 0  file: C:/Users/zakad/AppData/Roaming/pico-8/_label.png
+[10596098]  ok_
+[10596099] 2. writing C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.js
+[10631929] exporting html: attempttwo.html 1 1
+[10631933] 1. export html
+[10631933] 1.a opening output: C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.html
+[10631933] 1.b replacements
+[10631933]  ok_
+[10631941] codo_save_png result: 0  file: C:/Users/zakad/AppData/Roaming/pico-8/_label.png
+[10631941]  ok_
+[10631941] 2. writing C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.js
