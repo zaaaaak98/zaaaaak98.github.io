@@ -34,13 +34,13 @@ end
 function update_game_map_one()
  playermovement() -- Handles player movement
  -- Check for player entering specific areas (Superdry stores)
- enter_scene(20, 28, 24, 32)
- enter_scene(36, 44, 24, 32)
- enter_scene(52, 60, 24, 32)
- enter_scene(92, 100, 24, 32)
+ enter_superdry(20,28,24,32)
+ enter_superdry(36,44,24,32)
+ enter_superdry(52,60,24,32)
  -- Restrict player from moving off the map
- dont_leave()
-
+ if y>64 and scene==0 then
+  y = 64
+ end
  -- Change to second map if player moves past the right edge of the screen
  if x>124 and mx != 2 then
   maptwo()    -- Load second map
@@ -59,7 +59,9 @@ function update_game_map_two()
  end
 
  -- Restrict player from moving off the map
- dont_leave()
+ if y>64 and scene==0 then
+  y = 64
+ end
 end
 
 -- Drawing the first game map
@@ -117,46 +119,22 @@ end
 function update_scene_one()
  -- Trigger scene dialogue if the player presses X
  playermovement()
- leave()
 end
 
 -- Update functions for other scenes
 function update_scene_two()
  playermovement()
- leave()
 end
 
 function update_scene_three()
  playermovement()
- leave()
-end
-
-function update_cutscene()
- leave()
-end
-
-function update_scene_five()
-  playermovement()
-  leave()
-end
-
-function update_scene_six()
-  playermovement()
-  leave()
-end
-
-function update_scene_seven()
-  playermovement()
-  leave()
-end
-
-function update_scene_eight()
-  playermovement()
-  leave() 
+ if btnp(❎) then
+  mapone() -- Go back to map one
+ end
 end
 
 -- Draw the first scene
-function draw_superdry()
+function draw_scene_one()
  showmap(3) -- draw part of the map
  spr(1, x, 40) -- draw Izaak's sprite
  -- Draw based on scene state
@@ -226,16 +204,6 @@ function draw_superdry()
  end
 end
 
-function draw_cutscene()
- cutscene = true
- if scene==4 then scene_four_cutscene() end
- if cutscene == false then  
-  y=30 -- Adjust y position
-  _draw = draw_game_map_one -- Set drawing function back to game map
-  _update = update_game_map_one -- Set update function back to game map
- end
-end
-
 -- Set initial update and draw functions for the game
 _update = update_menu
 _draw = draw_menu
@@ -250,12 +218,12 @@ end
 
 -- Move player to right edge of the screen
 function enter_right()
- x = 120
+ x = 124
 end
 
 -- Move player to left edge of the screen
 function enter_left()
- x = 1
+ x = 0
 end
 
 -- Player movement function
@@ -273,15 +241,7 @@ function playermovement()
   if izaak > 2 then izaak = 1 end -- Loop between two sprites
   w = 5 -- Reset animation counter
  end
-end
-
-function leave()
-  if btnp(🅾️) and mx==1 then
-    --start game
-    mapone()
-  elseif btnp(🅾️) and mx==2 then
-    maptwo()
-  end
+ 
 end
 
 function anniemovement(facing)
@@ -301,21 +261,6 @@ end
 function printcoords()
  print(x, 7)
  print(y, 7)
- print(scene, 7)
-end
-
-function dont_leave()
-  if y>=64 and scene==0 then
-    y = 64
-  elseif y<0 and scene==0 then
-    y=0
-  end
-  if x>120 and scene==0 and mx==2 then
-    x = 120
-  end
-  if x<1 and scene==0 and mx==1 then
-    x = 1
-  end
 end
 
 -->8
@@ -349,65 +294,31 @@ end
 
 -- Handle different scenes
 function scene_one()
- _draw = draw_superdry
+ _draw = draw_scene_one
  _update = update_scene_one
 end
 
 function scene_two()
- _draw = draw_superdry
+ _draw = draw_scene_one
  _update = update_scene_two
 end
 
 function scene_three()
- _draw = draw_superdry
+ _draw = draw_scene_one
  _update = update_scene_three
 end
 
-function scene_four()
- _draw = draw_cutscene
- _update = update_cutscene
-end
-
-function scene_five()
-  _draw = draw_easthampsteadpark
-  _update = update_scene_five
-end
-
-function scene_six()
- _draw = draw_easthampsteadpark
- _update = update_scene_six
-end
-
-function scene_seven()
-  _draw = draw_cineworld
-  _update = update_scene_seven
-end
-
-function scene_eight()
-  _draw = draw_cineworld
-  _update = update_scene_eight
-end
-
 -- Check if player enters a specific region (Superdry store)
-function enter_scene(x_one,x_two,y_one,y_two)
+function enter_superdry(x_one,x_two,y_one,y_two)
  if x>x_one and x<x_two then
   if y>y_one and y<y_two then
+    cutscene = true
    if btnp(❎) and scene==1 then
     scene_one() -- Trigger scene one
    elseif btnp(❎) and scene==2 then
     scene_two() -- Trigger scene two
    elseif btnp(❎) and scene==3 then
     scene_three() -- Trigger scene three
-   elseif btnp(❎) and scene==4 then
-    scene_four() --Trigger scene four
-   elseif btnp(❎) and scene==5 then
-    scene_five() -- Trigger scene five
-   elseif btnp(❎) and scene==6 then
-    scene_six() -- Trigger scene sixe
-   elseif btnp(❎) and scene==7 then
-    scene_seven() -- Trigger scene seven
-   elseif btnp(❎) and scene==8 then
-    scene_eight() -- Trigger scene eight
    end
   end
  end
@@ -559,7 +470,7 @@ function scene_three_dialogue_part_one()
  speak("no problem, i'll wait", 1)
  speak("here", 2)
  sleep(2)
- cutscene=false
+ 
 end 
 
 function scene_three_dialogue_part_two()
@@ -575,58 +486,7 @@ function scene_three_dialogue_part_two()
  speaker("izaak")
  speak("let's get you some food.", 1)
  sleep(2)
- cutscene = false
 end  
-
-function scene_four_cutscene()
-  cls()
-  print("some time passes...")
-  sleep(1)
-  print(" ")
-  sleep(1)
-  print("izaak and annie speak using a ") 
-  print(" ")
-  sleep(1)
-  print("primative form of communication")
-  print(" ")
-  sleep(1)
-  print("known as snapchat...")
-  sleep(5)
-  cls()
-  print("eventually, izaak asks annie") 
-  print(" ")
-  sleep(1)
-  print("if she needs a lift to the") 
-  print(" ")
-  sleep(1)
-  print("superdry christmas party...")
-  sleep(5)
-  print(" ")
-  print(" ")
-  print(" ")
-  print(" ")
-  print("unfortunately for him, he said")
-  print(" ")
-  sleep(1)
-  print("this in a public space and ") 
-  print(" ")
-  sleep(1)
-  print("ended up offering jordan a lift")
-  print(" ")
-  sleep(1)
-  print("too...")
-  sleep(5)
-  cls()
-  print("what an idiot")
-  sleep(2)
-  cls()
-  print("fast forward to the night")
-  print(" ")
-  sleep(1)
-  print("of the christmas party...")
-  sleep(5)
-  cutscene=false
-end
 
 -- Display dialogue text letter by letter
 function speak(words,lines)
@@ -642,7 +502,7 @@ end
 -- Display speaker name
 function speaker(person)
  print(person, 8, 68, 7)
- sleep(1/2) -- Pause to show name
+ sleep(0.5) -- Pause to show name
 end
 
 -- Clear speaker name

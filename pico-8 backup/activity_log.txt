@@ -287,3 +287,32 @@
 2024-12-04 16:17:06 C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8
  irrrrrrrrrrrii.........rrrrrrrrrrrrrrrrrrrrrr_________irrrrrrrrrrr___r_______rrr
  rr_____rrrrrrrrrrrr____r_________rri..rrrrrrrirrrrrrrrrrr__rri..
+2024-12-05 16:41:55 C:/Users/zakad/AppData/Roaming/pico-8/carts/untitled_1.p8
+ iii
+2024-12-05 16:42:04 C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8
+ ii.........irrrrrrrrrrr______riirrrrrrrrrr____r_________rrrrr_________r_________
+ r_________rr_r_________rrrr_________rrrrrrrrrrrr_____i.........irrrrrirrrrrrrrrr
+ rrrr_r____irrrrrrrrrrrrrrrr____r_________icgg...iirrrrrrrrr_______r_________irrr
+ rrrrrrr_____r_________rr_________r_rr____r________rrrrrrrrrr________r__r_____ggg
+ 
+2024-12-07 14:07:38 C:/Users/zakad/AppData/Roaming/pico-8/carts/untitled_1.p8
+ ii...ii
+2024-12-07 14:07:59 C:/Users/zakad/AppData/Roaming/pico-8/carts/present/attempttwo.p8
+ irrrrrrrr_________rrrrrrrrr_______rrr____r__r_________irrrrrrrrr____ii....irrrrr
+ rrrr_____i......rrrrrrrrrrr_____r_irrrrrrrrrrrrrrrrrrrr_________iiirrrrrrrrrrrrr
+ rrrrrrr_________rgii.........rrrrrrrrrr_________r_________irrrrrrrrr_________r_r
+ irrrrrrrr_rr_________r_________irrrrrrrr_rrrrrrrrrrrrr_________irrrrrrrr__rrr___
+ ______rr_________iirrrrrrrrr_________r_________rrrrrrrrrr_________igmmmmmmmmmmmm
+ mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm..m.mmmmm..mm.mg.........g.........g......
+ ...ggggggigigigirrrrrrrrrrrrrr_________rrr_________r_________rr_________iii.....
+ ....ii.........ii..irrrrrrrrrgg.........irrrrrrrr_rrrrrrrrrrrr_rrrrrrrrrri......
+ ...rrrrrrrrrrrrrrrg.........ii.........ii.........iii.........gii.........iii...
+ ......irrrrrrrrrrrrrii..rrrrrrrrrr_____rrrrrr__rrrrrrrrr_r____ii.........rrrrrrr
+ r_________rrrrrrrr__rr_irrrrrrrrrrri.........girrrrrrrrrii.....iirrrrrrrrrrrrrr_
+ ______r_r__r_________r_________rr_________rirrrrrrrrrii.........rrrrrrrr_i.i.i.i
+ .........irrrrrrrr__ri.........rrrrrrrri.........irrrrrrrr__ii.........i........
+ .i........irrrrrrri.........irrrrrrrri.........irrrrrrrr_________irrrrrrrr_r__ir
+ rrrrrrrrr_________rr__rrrrrrrrrrrr___r__rrr_____rri.........i.....irrrrrrrrrrrrr
+ _________grrrrrrrrrri.........irrrrrrrrrrri.........ii.irrrrrrrrrrrrrrrrr___r___
+ ______rrrrrrrr______rirrrrrrrrrrrrrrrrr_________irrrrrrrrrrrrrrrrrrrirrrrrrr__rr
+ 
